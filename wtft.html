@@ -11,7 +11,7 @@
 <body>
 	<div id="nav">
 	  <div class="navs">
-	    <img id="zxra" src="/img/zxra.png">
+	    <img id="zxra" src="./img/zxra.png">
 	  </div>
 
 	  <a class="navlist home" id="home">
@@ -51,7 +51,7 @@
   	  <div id="actionbar">
   	    <h2>Actionbar</h2><hr>
   	    <p>Jongkok(Sneak):</p>
-  	    <img src="/img/wtft_sneak.jpg">
+  	    <img src="./img/wtft_sneak.jpg">
   	    <p id="sneakactionbar" class="code">
   	      players.runCommand(`titleraw @s actionbar { <r id="ylw">"rawtext"</r>:[{ <r id="ylw">"translate"</r>: <r id="ylw">"${enTrans}"</r> }, { <r id="ylw">"text"</r>: <r id="ylw">"§7\n${view.typeId}\n${hp.currentValue.toFixed(0)}/${hp.defaultValue} HP${stat}"</r> }]}`)
   	    </p>
@@ -60,7 +60,7 @@
   	      players.runCommand(`titleraw @s actionbar { <r id="ylw">"rawtext"</r>:[{ <r id="ylw">"translate"</r>: <r id="ylw">"${translated}"</r> }, { <r id="ylw">"text"</r>: <r id="ylw">"§7\n${block.typeId}\nX: ${block.location.x} Y: ${block.location.y} Z: ${block.location.z}"</r> }]}`)
   	    </p>
   	    <p>Tanpa Jongkok(No Sneak)</p>
-  	    <img src="/img/wtft_no_sneak.jpg">
+  	    <img src="./img/wtft_no_sneak.jpg">
   	    <p id="nosneakactionbar" class="code">
   	      players.runCommand(`titleraw @s actionbar { <r id="ylw">"rawtext"</r>:[{ <r id="ylw">"translate"</r>: <r id="ylw">"${enTrans}"</r> }, { <r id="ylw">"text"</r>: <r id="ylw">"§7 - ${hp.currentValue.toFixed(0)}/${hp.defaultValue} HP"</r> }]}`)
   	    </p>
