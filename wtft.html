@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/all.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="./js/index.js" type="module"></script>
+  <title>Zxra - WTFT</title>
+</head>
+<body>
+	<div id="nav">
+	  <div class="navs">
+	    <img id="zxra" src="/img/zxra.png">
+	  </div>
+
+	  <a class="navlist home" id="home">
+	    <i class='bx bxs-home-alt-2'></i>
+	    <b class="tooltip">Beranda</b>
+	  </a>
+	   <a class="navlist zxraapi" id="zxraapi">
+	    <i class='bx bxs-vial'></i>
+	    <b class="tooltip">Zxra Api</b>
+	  </a>
+	  <a class="navlist zxradustry" id="zxradustry">
+	    <i class='bx bxs-package'></i>
+	    <b class="tooltip">ZxraDustry</b>
+	  </a>
+	   <a class="navlist zxrarpg" id="zxrarpg">
+	    <i class='bx bxs-meteor'></i>
+	    <b class="tooltip">Zxra Rpg</b>
+	  </a>
+	   <a class="navlist zxrawtft" id="zxrawtft">
+	    <i class='bx bxs-carousel'></i>
+	    <b class="tooltip">Zxra WTFT</b>
+	  </a>
+	</div>
+
+	<div class="container">
+	  <b>Zxra What The F This(WTFT)</b>
+	  <hr>
+	  
+	  <div class="content">
+	    <p>Memerlukan addon Zxra Api untuk mengatasi bug dari nama blok yang masih mentahan</p>
+	    <p class="code">
+	      <f>Konten Zxra WTFT</f><br>
+	      <a href="#actionbar">#Actionbar</a><br>
+  	    <a href="#function">#Fungsi</a><br>
+  	    <a href="#system">#Sistem</a>
+  	  </p>
+  	  <div id="actionbar">
+  	    <h2>Actionbar</h2><hr>
+  	    <p>Jongkok(Sneak):</p>
+  	    <img src="/img/wtft_sneak.jpg">
+  	    <p id="sneakactionbar" class="code">
+  	      players.runCommand(`titleraw @s actionbar { <r id="ylw">"rawtext"</r>:[{ <r id="ylw">"translate"</r>: <r id="ylw">"${enTrans}"</r> }, { <r id="ylw">"text"</r>: <r id="ylw">"§7\n${view.typeId}\n${hp.currentValue.toFixed(0)}/${hp.defaultValue} HP${stat}"</r> }]}`)
+  	    </p>
+  	    <p>Jongkok(Sneak) - Blok</p>
+  	    <p id="sneakactionbarblock" class="code">
+  	      players.runCommand(`titleraw @s actionbar { <r id="ylw">"rawtext"</r>:[{ <r id="ylw">"translate"</r>: <r id="ylw">"${translated}"</r> }, { <r id="ylw">"text"</r>: <r id="ylw">"§7\n${block.typeId}\nX: ${block.location.x} Y: ${block.location.y} Z: ${block.location.z}"</r> }]}`)
+  	    </p>
+  	    <p>Tanpa Jongkok(No Sneak)</p>
+  	    <img src="/img/wtft_no_sneak.jpg">
+  	    <p id="nosneakactionbar" class="code">
+  	      players.runCommand(`titleraw @s actionbar { <r id="ylw">"rawtext"</r>:[{ <r id="ylw">"translate"</r>: <r id="ylw">"${enTrans}"</r> }, { <r id="ylw">"text"</r>: <r id="ylw">"§7 - ${hp.currentValue.toFixed(0)}/${hp.defaultValue} HP"</r> }]}`)
+  	    </p>
+  	  </div>
+  	  <div id="function">
+  	    <h2>Fungsi</h2><hr>
+  	    <p>Menghitung jarak dua titik:</p>
+  	    <p class="code" id="viewdistance">
+  	      <r id="indg">const</r> viewDistance = <r id="red">5</r>;<br><br>
+  	      <r id="indg">function</r> inViewDistance(targetLocation, headLocation) {<br>
+  	        &nbsp; <r id="indg">return</r> <r id="lgtblue">Math</r>.abs(targetLocation.x - headLocation.x) < viewDistance && <r id="lgtblue">Math</r>.abs(targetLocation.z - headLocation.z) < viewDistance && <r id="lgtblue">Math</r>.abs(targetLocation.y - headLocation.y) < viewDistance<br>
+  	      }
+  	    </p>
+  	    <p>Mengatur nama dari sebuah blok:</p>
+  	    <p class="code" id="translated">
+  	      <r id="indg">function</r> getBlockTranslateName(name) {<br>
+  	      &nbsp; <r id="indg">const</r> fences = [...fences], newLogs = [...newLogs], doors = [...doors], signs = [...signs];<br><br>
+  	      &nbsp; <r id="indg">if</r>()<r id="grn">//Some code</r><br><br>
+  	      &nbsp; <r id="indg">let</r> translate = `tile.${name}.name`;<br><br>
+  	      &nbsp; <r id="indg">if</r>() <r id="grn">// Some code again</r><br><br>
+  	      &nbsp; <r id="indg">return</r> translate<br>
+  	      }
+  	    </p>
+  	  </div>
+  	  <div id="system">
+  	    <h2>Sistem</h2><hr>
+  	    <p class="code">
+  	      <r id="grn">// main.js</r><br>
+  	      <r id="indg">import</r> { Player, world, system, EntityTypes } from <r id="ylw">'@minecraft/server'</r>;<br>
+  	      <r id="indg">let</r> err = {};<br><br>
+  	      system.runInterval(() => {<br>
+  	      &nbsp; for(<r id="indg">let</r> players of world.getPlayers()) {<br>
+  	      &nbsp; &nbsp; <r id="indg">let</r> view = players.getEntitiesFromViewDirection();<br><br>
+  	      &nbsp; &nbsp; <r id="indg">if</r> (view.length !== <r id="red">0</r>) {<br>
+  	      &nbsp; &nbsp; &nbsp; view = view[<r id="red">0</r>].entity;<br><br>
+  	      &nbsp; &nbsp; &nbsp; <r id="indg">let</r> hp = view.getComponent(<r id="ylw">"health"</r>) || { <r id="ylw">"currentValue"</r>: <r id="red">0</r>, <r id="ylw">"defaultValue"</r>: <r id="red">0</r> }, identifier = view.typeId.split(<r id="ylw">":"</r>)[<r id="red">1</r>], stat = <r id="ylw">""</r>;<br>
+  	      &nbsp; &nbsp; &nbsp; <r id="indg">if</r>(view.typeId.startsWith(<r id="ylw">"cz"</r>)) identifier = view.typeId;<br><br>
+  	      &nbsp; &nbsp; &nbsp; view.getComponent(<r id="ylw">"minecraft:tameable"</r>) ? stat += <r id="ylw">"\nTameable"</r>: <r id="red">0</r>;<br>
+  	      &nbsp; &nbsp; &nbsp; view.getComponent(<r id="ylw">"minecraft:is_tamed"</r>) ? stat += <r id="ylw">"\nHas been Tamed"</r>: <r id="red">0</r>;<br>
+  	      &nbsp; &nbsp; &nbsp; view.getComponent(<r id="ylw">"minecraft:is_baby"</r>) ? stat += <r id="ylw">"\nBaby Mob"</r>: stat += <r id="ylw">"\nAdult Mob"</r>;<br>
+  	      &nbsp; &nbsp; &nbsp; view.getComponent(<r id="ylw">"minecraft:is_charged"</r>) ? stat += <r id="ylw">"\nCharged"</r>: <r id="red">0</r>;<br>
+  	      &nbsp; &nbsp; &nbsp; view.getComponent(<r id="ylw">"minecraft:variant"</r>) ? stat += <r id="ylw">"\nVariant "</r> + view.getComponent(<r id="ylw">"minecraft:variant"</r>).value: <r id="red">0</r>;<br><br>
+  	      &nbsp; &nbsp; &nbsp; <r id="indg">let</r> enTrans = `entity.${identifier}.name`;<br>
+  	      &nbsp; &nbsp; &nbsp; <r id="indg">if</r>(identifier == <r id="ylw">"npc"</r>) enTrans = <r id="ylw">"Npc"</r>;<br>
+  	      &nbsp; &nbsp; &nbsp; <r id="indg">if</r>(identifier == <r id="ylw">"player"</r>) enTrans = view.name;<br><br>
+  	      &nbsp; &nbsp; &nbsp; <r id="grn">// This will show in actionbar, sneaking with no sneaking will be different</r><br>
+  	      &nbsp; &nbsp; &nbsp; players.isSneaking ? <a href="#sneakactionbar">Sneak</a>: <a href="#nosneakactionbar">No-Sneak</a>;<br>
+  	      &nbsp; &nbsp; } <r id="indg">else</r> {<br>
+  	      &nbsp; &nbsp; &nbsp; <r id="indg">try</r> {<br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; view = players.getBlockFromViewDirection().block;<br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; <r id="indg">if</r>(!view || view == <r id="indg">undefined</r> || view == <r id="indg">null</r> || view.length >= <r id="red">0</r>) <r id="indg">return</r><br><br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; <r id="indg">let</r> blockName = view.typeId.split(<r id="ylw">":"</r>)[<r id="red">0</r>];<br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; <r id="indg">if</r>(!blockName) <r id="indg">return</r><br><br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; <r id="indg">let</r> block = view, translated = <a href="#translated">getBlockTranslateName</a>(blockName)<br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; <r id="indg">if</r>(<a href="#viewdistance">inViewDistance</a>(players.getHeadLocation(), block.location) && players.isSneaking == <r id="indg">true</r>)  <a href="#sneakactionbarentity">Sneak-Blok</a><br>
+  	      &nbsp; &nbsp; &nbsp; } <r id="indg">catch</r>(e) {<br>
+  	      &nbsp; &nbsp; &nbsp; &nbsp; console.warn(e)<br>
+  	      &nbsp; &nbsp; &nbsp; }<br>
+  	      &nbsp; &nbsp; }<br>
+  	      &nbsp; }<br>
+  	      }, <r id="red">6</r>)<br><br>
+  	      system.beforeEvents.watchdogTerminate.subscribe(e => {<br>
+  	      &nbsp; e.cancel = <r id="indg">true</r>;<br>
+  	      &nbsp; world.sendMessage(<r id="ylw">"[§l§2CZ§r] Zxra WTFT "</r> + e.terminateReason)<br>
+  	      });<br>
+  	    </p>
+  	  </div>
+	  </div>
+	</div>
+</body>
+</html>

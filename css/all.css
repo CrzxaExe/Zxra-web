@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+  background: #151515;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 0;
+  user-select: none;
+  position: relative;
+  margin: 0;
+  font-family: Monospace;
+}
+#nav {
+  height: 100vh;
+  width: 2.9em;
+  background: #43424250;
+  position: fixed;
+  transition: all .5s ease;
+  display: flex;
+  overflow: hidden;
+  z-index: 7;
+  flex-direction: column;
+}
+#nav.open {
+  width: 10em;
+  background: #323232;
+}
+#nav #zxra {
+  object-fit: cover;
+  position: relative;
+  transition: all .55s ease;
+  background: #62626220;
+  left: .1em;
+  top: .16em;
+  width: 2.6em;
+  border-radius: .5em;
+}
+#nav.open #zxra {
+  left: 70%;
+}
+#zxra:hover, #nav.open #zxra{
+  background: #525252;
+}
+.navlist {
+  width: 10em;
+  border-radius: .5em;
+  height: 1.9em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background: #15151500;
+  font-family: Sans-Serif;
+  align-content: center;
+  padding: .2em;
+  color: white;
+  font-size: .8em;
+  margin-top: .24em;
+  margin-left: .13em;
+  text-align: left;
+  transition: all .5s ease;
+}
+.navlist:hover {
+  background: #151515;
+  height: 2.5em;
+}
+.navlist i {
+  flex-grow: .4;
+  position: relative;
+  left: .5em;
+  font-size: 1.2em;
+}
+.navlist b {
+  transition: all .5s ease;
+  opacity: 0;
+}
+#nav.open .navlist b {
+  opacity: 1;
+}
+.container {
+  background: #89898900;
+  z-index: 1;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  height: 92.95vh;
+  overflow-y: scroll;
+  transition: all .5s ease;
+  padding: 1vh 1em 0 3.5em;
+}
+.container b {
+  font-size: 1.14em;
+  position: relative;
+  left: 0em;
+  transition: all .5s ease;
+  font-family: Arial;
+}
+#nav.open + .container b {
+  left: 5em;
+}
+.content {
+  font-size: .79em;
+}
+.content #opening {
+  object-fit: contain;
+  width: 100%;
+}
+.content h2 {
+  font-weight: bold;
+  margin: .8em 0;
+}
+.content p - .code{
+  text-align: justify;
+  margin: .2em 0;
+}
+.content ul {
+  padding: .1em 0 .8em 0;
+}
+.content ul li {
+  position: relative;
+  left: .6em;
+  margin: 0 0 .5em 0;
+}
+.content ul li :where(a, p):not(.code) {
+  margin: 0;
+  padding: 0;
+}
+.code {
+  background: #2a2a2a;
+  margin-top: .8em;
+  border-radius: .3em;
+  max-width: 100%;
+  overflow-y: scroll;
+  user-select: text;
+  white-space: nowrap;
+  text-align: left;
+  padding: .8em;
+}
+.code a {
+  text-decoration: none;
+  color: cyan;
+}
+.code f {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.code #ylw {
+  color: yellow;
+}
+.code #red {
+  color: red;
+}
+.code #indg {
+  color: #8288f2;
+}
+.code #grn {
+  color: green;
+}
+.code #lgtblue {
+  color: lightblue;
+}
