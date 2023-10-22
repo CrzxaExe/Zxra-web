@@ -163,3 +163,15 @@ body {
 .code #lgtblue {
   color: lightblue;
 }
+.code-drawer {
+  height: 3em;
+}
+.code-drawer:hover {
+  height: auto;
+}
+.code-drawer2 {
+  height: 3.8em;
+}
+.code-drawer2:hover {
+  height: auto;
+}
