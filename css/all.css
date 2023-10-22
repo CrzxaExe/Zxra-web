@@ -82,6 +82,7 @@ body {
 }
 .container {
   background: #89898900;
+  scroll-behavior: smooth;
   z-index: 1;
   position: relative;
   color: white;

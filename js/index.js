@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
   })
   
   document.getElementById("home").addEventListener("click", () => window.location.href="index.html")
+  document.getElementById("zxraapi").addEventListener("click", () => window.location.href="api.html")
   document.getElementById("zxrarpg").addEventListener("click", () => window.location.href="rpg.html")
   document.getElementById("zxrawtft").addEventListener("click", () => window.location.href="wtft.html")
 })
