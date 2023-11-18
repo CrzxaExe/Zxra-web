@@ -17,7 +17,7 @@ body {
 #nav {
   height: 100vh;
   width: 2.9em;
-  background: #43424250;
+  background: #43424240;
   position: fixed;
   transition: all .5s ease;
   display: flex;
@@ -26,29 +26,52 @@ body {
   flex-direction: column;
 }
 #nav.open {
-  width: 10em;
+  width: 10.4em;
   background: #323232;
 }
 #nav #zxra {
   object-fit: cover;
   position: relative;
-  transition: all .55s ease;
+  transition: all .4s ease;
   background: #62626220;
   left: .1em;
   top: .16em;
+  z-index: 1;
   width: 2.6em;
   border-radius: .5em;
 }
 #nav.open #zxra {
-  left: 70%;
+  left: 73.3%;
 }
 #zxra:hover, #nav.open #zxra{
-  background: #525252;
+  background: #9a9ff3;
+}
+.navs b {
+  position: absolute;
+  opacity: 0;
+  text-align: left;
+  padding: 0 6.5%;
+  letter-spacing: -.9px;
+  background: #4851f2;
+  color: white;
+  font-size: .96em;
+  line-height: 3em;
+  border-radius: .5vw;
+  width: 886%;
+  left: 0;
+  top: .18em;
+  z-index: 0;
+  height: 2.7em;
+  transition: all .3s ease;
+}
+#nav.open .navs b {
+  opacity: 1;
+  width: 85%;
 }
 .navlist {
-  width: 10em;
+  width: 10.9em;
   border-radius: .5em;
-  height: 1.9em;
+  height: 2.2em;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -58,23 +81,23 @@ body {
   padding: .2em;
   color: white;
   font-size: .8em;
-  margin-top: .24em;
-  margin-left: .13em;
+  margin-top: .26em;
+  margin-left: .14em;
   text-align: left;
   transition: all .5s ease;
 }
 .navlist:hover {
   background: #151515;
-  height: 2.5em;
 }
 .navlist i {
   flex-grow: .4;
   position: relative;
-  left: .5em;
+  left: .4em;
   font-size: 1.2em;
 }
 .navlist b {
   transition: all .5s ease;
+  width: 65%;
   opacity: 0;
 }
 #nav.open .navlist b {
@@ -137,8 +160,13 @@ body {
   overflow-y: scroll;
   user-select: text;
   white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   text-align: left;
   padding: .8em;
+}
+.code::-webkit-scrollbar {
+  display: none;
 }
 .code a {
   text-decoration: none;
@@ -176,4 +204,9 @@ body {
 }
 .code-drawer-apk:hover {
   height: 21em;
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background: white;
 }

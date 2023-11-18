@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/all.css">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
@@ -19,27 +19,20 @@
 	<div id="nav">
 	  <div class="navs">
 	    <img id="zxra" src="./img/zxra.png">
+	    <b>Zxra Creation</b>
 	  </div>
 
 	  <a class="navlist home" id="home">
 	    <i class='bx bxs-home-alt-2'></i>
 	    <b class="tooltip">Beranda</b>
 	  </a>
-	   <a class="navlist zxraapi" id="zxraapi">
-	    <i class='bx bxs-vial'></i>
-	    <b class="tooltip">Zxra Api</b>
+	   <a class="navlist bzb" id="bzb">
+	    <i class='bx bxs-carousel'></i>
+	    <b class="tooltip">Better Zxra BE</b>
 	  </a>
 	  <a class="navlist zxradustry" id="zxradustry">
 	    <i class='bx bxs-package'></i>
 	    <b class="tooltip">ZxraDustry</b>
-	  </a>
-	   <a class="navlist zxrarpg" id="zxrarpg">
-	    <i class='bx bxs-meteor'></i>
-	    <b class="tooltip">Zxra Rpg</b>
-	  </a>
-	   <a class="navlist zxrawtft" id="zxrawtft">
-	    <i class='bx bxs-carousel'></i>
-	    <b class="tooltip">Zxra WTFT</b>
 	  </a>
 	</div>
 
@@ -48,6 +41,7 @@
 	  <hr>
 	  
 	  <div class="content">
+	    <p>Ini adalah addon untuk melihat identitas blok/entitas dan properti dari blok/entitas tersebut. Ini masih versi awal jadi sudah pasti banyak bug. Jika menemukan sesuatu yang dapat memperbagus addon ini, bisa kirim ke sosial media kita. Ingat yang berkaitan dengan addon ini</p>
 	    <p>Memerlukan addon Zxra Api untuk mengatasi bug dari nama blok yang masih mentahan</p>
 	    <p class="code">
 	      <f>Konten Zxra WTFT</f><br>
@@ -57,6 +51,7 @@
   	  </p>
   	  <div id="actionbar">
   	    <h2>Actionbar</h2><hr>
+  	    <p>Tampilan teks dalam Minecraft</p>
   	    <p>Jongkok(Sneak):</p>
   	    <img src="./img/wtft_sneak.jpg">
   	    <p id="sneakactionbar" class="code">
@@ -74,6 +69,7 @@
   	  </div>
   	  <div id="function">
   	    <h2>Fungsi</h2><hr>
+  	    <p>Fungsi fungsi yang bisa digunakan dalam skript didalam addon ini</p>
   	    <p>Menghitung jarak dua titik:</p>
   	    <p class="code" id="viewdistance">
   	      <r id="indg">const</r> viewDistance = <r id="red">5</r>;<br><br>
@@ -94,6 +90,7 @@
   	  </div>
   	  <div id="system">
   	    <h2>Sistem</h2><hr>
+  	    <p>Inti utama dari addon ini yang akan menjalankan semua fungsi yang sudah diatur</p>
   	    <p class="code">
   	      <r id="grn">// main.js</r><br>
   	      <r id="indg">import</r> { Player, world, system, EntityTypes } from <r id="ylw">'@minecraft/server'</r>;<br>
