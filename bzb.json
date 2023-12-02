@@ -1,0 +1,56 @@
+{
+  "down": [
+    {
+      "ver": "2.6.0",
+      "mc": "1.20.40",
+      "link": "https://www.mediafire.com/file/5a34t9l0fak382v/ZxraBZB-2.6.0_Mc1.20.40.mcaddon/file",
+      "info": "Masih dalam pengembangan",
+      "update": {
+        "game": [
+          "Menambahkan mekanik Stamina",
+          "Menambahkan mekanik Kehausan",
+          "Menambahkan senjata baru:\n• Bringer [Reaper - Epic]\n• Crusher [Hammer - Epic]\n• Destiny [Spear - Unique]\n• Katana [Katana - Rare]\n• Silent [Katana - Uniques]\n• Spear [Spear - Rare]",
+          "Menambahkan Peralatan dengan tier:\n• Kloropit\n• Dexterite\n• Diarite\n• Firerite\n• Mina\n• Minarite",
+          "Menambahkan Armor dengan tier:\n• Dexterite\n• Mina\n• Minarite",
+          "Mengkompress beberapa file",
+          "Kustom UI - Simple Zxra UI",
+          "Menambahkan entitas baru: 3D Particle",
+          "Menambahkan boss baru: Kyle(Belum sepenuhnya selesai)",
+          "Memperbaiki beberapa bug",
+          "Menambahkan beberapa item",
+          "Menambahkan Partikel dan Sound baru",
+          "Mengganti resep utama Mata Ender",
+          "Menambahkan beberapa Blok baru"
+        ],
+        "buff": [
+          "Senjata Kyle\n• Pasif Slayer, Thornification\n• Skill 1, 2, 3, Special",
+          "Senjata Liberator\n• Pasif Reaper, Soul Of Death\n• Skill 2, 3\n• Summons Buff: Atk, HP, Speed",
+          "Creeper HP, Speed"
+        ],
+        "entity": [
+          "Menambahkan variasi baru untuk Zombie",
+          "Mengubah syarat spawn Zombie"
+        ],
+        "technical": [
+          "Menambahkan class:\n• Items\n• Entity\n• Specialist",
+          "Menghaluskan beberapa animasi",
+          "Menyimpelkan script",
+          "Menambahkan bug untuk di selesaikan pada update berikutnya",
+          "Crafting Baru: Forger"
+        ]
+      }
+    },
+    {
+      "ver": "2.0.6",
+      "mc": "1.19.40",
+      "link": "https://www.mediafire.com/file/updi49nmu7rkhzs/ZxraBZB-2.0.6.mcaddon/file",
+      "info": ""
+    },
+    {
+      "ver": "2.0.0",
+      "mc": "1.19.20",
+      "link": "https://www.mediafire.com/file/dh2g7suyzzkbpjg/ZxraBZB-2.0.0.mcaddon/file",
+      "info": ""
+    }
+  ]
+}

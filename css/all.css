@@ -51,18 +51,18 @@ body {
   opacity: 0;
   text-align: left;
   padding: 0 6.5%;
-  letter-spacing: -.9px;
+  letter-spacing: -1px;
   background: #4851f2;
   color: white;
-  font-size: .96em;
-  line-height: 3em;
+  font-size: .95em;
+  line-height: 2.6em;
   border-radius: .5vw;
   width: 886%;
   left: 0;
   top: .18em;
   z-index: 0;
-  height: 2.7em;
-  transition: all .3s ease;
+  height: 2.71em;
+  transition: all .5s ease;
 }
 #nav.open .navs b {
   opacity: 1;
@@ -110,7 +110,7 @@ body {
   position: relative;
   color: white;
   overflow: hidden;
-  height: 92.95vh;
+  height: 97.95vh;
   overflow-y: scroll;
   transition: all .5s ease;
   padding: 1vh 1em 0 3.5em;
@@ -118,15 +118,17 @@ body {
 .container b {
   font-size: 1.14em;
   position: relative;
+  white-space: nowrap;
   left: 0em;
   transition: all .5s ease;
   font-family: Arial;
 }
-#nav.open + .container b {
-  left: 5em;
+
+#nav.open + .container b.slide {
+  left: 5.3em;
 }
 .content {
-  font-size: .79em;
+  font-size: .69em;
 }
 .content #opening {
   object-fit: contain;
@@ -205,8 +207,109 @@ body {
 .code-drawer-apk:hover {
   height: 21em;
 }
+.some-space {
+  line-height: 1.4em;
+}
 .line {
   height: 1px;
   width: 100%;
   background: white;
+}
+.progress {
+  display: flex;
+  align-items: center;
+}
+.progress .numbar {
+  width: 91%;
+  margin-inline: .7em;
+  background: #575757;
+  overflow: hidden;
+  height: 3px;
+}
+.numbar .bar {
+  background: #a7a7a7;
+  width: 0;
+  height: 3px;
+}
+.actbzb {
+  width: 98%;
+  height: 8em;
+  border-radius: .4em;
+  padding: .4em;
+  position: relative;
+  display: flex;
+  background: #242424;
+  margin-block: .5em;
+}
+.actbzb a {
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  margin: .2em;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+.actbzb a#news {
+  background: #ff1e1e;
+  width: 25%;
+  height: 95%;
+}
+.actbzb a#download {
+  background: #60b6f2;
+  width: 58%;
+  height: 45%;
+}
+.actbzb a#support {
+  background: #8cea92;
+  top: 49%;
+  left: calc(-48% - .4em);
+  width: 34%;
+  height: 46%;
+}
+.drop {
+  height: 1.47em;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  transition: all .5s ease;
+  overflow: hidden;
+}
+.drop.open {
+  height: auto;
+}
+.drop b {
+  margin-bottom: 1em;
+}
+.drop div {
+  margin: 1.4px 0;
+  display: flex;
+  width: calc(100% - 6px);
+  padding: 3px 6px;
+  font-size: 1.04em;
+  border-radius: 2px;
+  align-items: center;
+  height: auto;
+  background: #494949;
+}
+.drop c {
+  flex-basis: 98%;
+}
+.drop button {
+  color: white;
+  background: #707070;
+  border: 0 solid black;
+  font-size: 0.9em;
+  max-width: 1.5em;
+  position: relative;
+}
+.drop button i {
+  left: -.18em;
+  text-align: left;
+  position: relative;
+}
+.container img {
+  object-fit: contain;
+  width: 100%;
 }
