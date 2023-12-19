@@ -2,11 +2,12 @@ const navbar = document.getElementById("nav")
 const zxra = navbar.querySelector("#zxra")
 let ups = document.getElementById("updates")
 
-let bzbProc = { ver: "3.4.5", percen: 0.1 }, bzb = {}
+let bzbProc = { ver: "3.2.4", percen: 1.9 }, bzb = {}
 
 window.addEventListener("load", async () => {
   zxra.addEventListener("click", () => {
-    toggleNav()
+    toggleNav("nav")
+    toggleNav("mod")
   })
   
   await fetch("bzb.json").then(res => res.json()).then(json => bzb = json)
@@ -15,6 +16,7 @@ window.addEventListener("load", async () => {
   // Button
   document.getElementById("home").addEventListener("click", () => window.location.href="index.html")
   document.getElementById("bzb").addEventListener("click", () => window.location.href="bzb.html")
+  document.getElementById("galery").addEventListener("click", () => window.location.href="galery.html")
   document.getElementById("prosbar").textContent = `${bzbProc.percen}%`
   document.getElementById("bar").style.width = `${bzbProc.percen}%`
   document.getElementById("versionup").textContent = bzbProc.ver
@@ -35,12 +37,12 @@ window.addEventListener("load", async () => {
     ups.innerHTML += "<br>"
   })
   ups.innerHTML += `<b>${pkjh} Perubahan Baru Dalam Update<b>`
-  // Dond
+  // Done
 })
 
 // Functions
-function toggleNav() {
-  navbar.classList.toggle("open")
+function toggleNav(name) {
+  document.getElementById(name).classList.toggle("open")
 }
 function toggleVer() {
   let vers = document.getElementById("ver")

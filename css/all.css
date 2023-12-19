@@ -33,7 +33,7 @@ body {
   object-fit: cover;
   position: relative;
   transition: all .4s ease;
-  background: #62626220;
+  background: #62626230;
   left: .1em;
   top: .16em;
   z-index: 1;
@@ -51,17 +51,17 @@ body {
   opacity: 0;
   text-align: left;
   padding: 0 6.5%;
-  letter-spacing: -1px;
+  letter-spacing: -1.3px;
   background: #4851f2;
   color: white;
-  font-size: .95em;
-  line-height: 2.6em;
+  font-size: .92em;
+  line-height: 2.7em;
   border-radius: .5vw;
   width: 886%;
   left: 0;
   top: .18em;
   z-index: 0;
-  height: 2.71em;
+  height: 2.77em;
   transition: all .5s ease;
 }
 #nav.open .navs b {
@@ -69,18 +69,19 @@ body {
   width: 85%;
 }
 .navlist {
-  width: 10.9em;
+  width: 11.9em;
   border-radius: .5em;
   height: 2.2em;
   text-decoration: none;
   display: flex;
+  overflow: hidden;
   align-items: center;
   background: #15151500;
   font-family: Sans-Serif;
   align-content: center;
   padding: .2em;
   color: white;
-  font-size: .8em;
+  font-size: .68em;
   margin-top: .26em;
   margin-left: .14em;
   text-align: left;
@@ -92,16 +93,60 @@ body {
 .navlist i {
   flex-grow: .4;
   position: relative;
-  left: .4em;
-  font-size: 1.2em;
+  left: .7em;
+  font-size: 1.05em;
 }
 .navlist b {
   transition: all .5s ease;
   width: 65%;
+  position: absolute;
+  left: 23%;
+  padding: 0;
   opacity: 0;
+}
+.tl {
+  font-size: 0em;
+  overflow: hidden;
+  position: relative;
+  left: 1em;
+  color: #d8d8d8;
+  font-family: Monospace;
+  opacity: 0;
+  padding-block: 5px 0;
+}
+.tl c {
+  background: #292929;
+  display: block;
+  margin: 3px 0;
+  transition: all .5s ease;
+  padding: 5px 8px;
+}
+.tl c:hover {
+  background: #424242;
+}
+.tl c i {
+  left: -.2em;
+  justify-content: center;
+  font-size: .97em;
+  top: .1em;
+}
+#mod.open {
+  padding: .7em 0 .3em 0;
+}
+#mod.open .tl {
+  opacity: 1;
+  font-size: .81em;
+}
+#mod .tl {
+  left: 1em;
 }
 #nav.open .navlist b {
   opacity: 1;
+}
+#nav.open #mod.open {
+  height: auto;
+  padding: .45em 2px .15em 2px;
+  display: block;
 }
 .container {
   background: #89898900;
@@ -129,6 +174,7 @@ body {
 }
 .content {
   font-size: .69em;
+  position: relative;
 }
 .content #opening {
   object-fit: contain;
@@ -192,6 +238,9 @@ body {
 }
 .code #lgtblue {
   color: lightblue;
+}
+.code .motto::before, .code .motto::after {
+  content: '```';
 }
 .code-drawer-ap {
   height: 3.5em;
@@ -291,14 +340,14 @@ body {
   border-radius: 2px;
   align-items: center;
   height: auto;
-  background: #494949;
+  background: #363636;
 }
 .drop c {
   flex-basis: 98%;
 }
 .drop button {
   color: white;
-  background: #707070;
+  background: #242424;
   border: 0 solid black;
   font-size: 0.9em;
   max-width: 1.5em;
@@ -312,4 +361,89 @@ body {
 .container img {
   object-fit: contain;
   width: 100%;
+}
+.center {
+  position: relative;
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+.full-width {
+  width: 100%;
+}
+.cz-color {
+  background: #002d3b;
+  display: block;
+}
+.no-margin {
+  margin: .4em 0;
+}
+.rn {
+  color: orange;
+}
+.upd {
+  color: lime;
+}
+#clock {
+  font-family: Monospace;
+  font-size: 1.4vw;
+  background: #373737;
+  align-content: center;
+  justify-content: center;
+  line-height: 4vw;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  left: 0%;
+  transform: translateY(2vw);
+  z-index: 0;
+  color: #e5e5e5;
+  text-decoration: underline;
+  width: 10%;
+  border-radius: 0em .3em 0em .3em;
+  aspect-ratio: 1:1;
+  height: 4vw;
+  text-align: center;
+}
+#clock::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: .4em;
+  height: 2px;
+  color: #e5e5e5;
+}
+.flex-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justify {
+  object-fit: contain;
+  width: 27vw;
+  height: 27vw;
+  position: absolute;
+}
+.left-index {
+  left: -37%;
+  top: 10%;
+}
+.right-index {
+  position: relative;
+  width: 60vw;
+  text-align: left;
+  left: 24vw;
+}
+#news {
+  white-space: pre-wrap;
+}
+#news b {
+  position: relative;
+  top: 0;
+  left: 2px;
+}
+#news img {
+  position: relative;
+  bottom: 0;
+  left: 0;
 }

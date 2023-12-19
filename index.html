@@ -13,6 +13,7 @@
   <meta name="theme-color" content="#ffffff">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <script src="./js/index.js" type="module"></script>
+  <script src="./js/home.js" type="module"></script>
   <title>Zxra - Home</title>
 </head>
 <body>
@@ -23,16 +24,27 @@
 	  </div>
 
 	  <a class="navlist home" id="home">
-	    <i class='bx bxs-home'></i>
+	    <i class='bx bx-home'></i>
 	    <b class="tooltip">Beranda</b>
 	  </a>
-	  <a class="navlist bzb" id="bzb">
-	    <i class='bx bxs-carousel'></i>
-	    <b class="tooltip">Better Zxra BE</b>
+	  <a class="navlist galery" id="galery">
+	    <i class='bx bx-photo-album'></i>
+	    <b class="tooltip">Galery</b>
 	  </a>
-	  <a class="navlist zxradustry" id="zxradustry">
-	    <i class='bx bxs-package'></i>
-	    <b class="tooltip">ZxraDustry</b>
+	  <a class="navlist mod" id="mod">
+	    <i class='bx bx-folder-open'></i>
+	    <b class="tooltip">Project</b>
+	    <summary class="tl">
+	      <c id="bzb"><i class='bx bx-package upd'></i> Better Zxra BE</c>
+	      <c id="khyrowa"><i class='bx bxl-whatsapp upd' ></i> Khyro Wa</c>
+	      <c id="mkx"><i class='bx bxl-discord-alt rn' ></i> Mkx</c>
+	      <c id="dustry"><i class='bx bx-package'></i> ZxraDustry</c>
+	      <c id="rest"><i class='bx bxl-javascript rn' ></i> Zxra Rest Api</c>
+	    </summary>
+	  </a>
+	  <a class="navlist home" id="home">
+	    <i class='bx bx-copyright' ></i>
+	    <b class="tooltip">Zxra</b>
 	  </a>
 	</div>
 
@@ -42,51 +54,20 @@
 	  
 	  <div class="content">
 	    <img src="./img/cz_opening.png" alt="Start Screen" id="opening">
-	    <h2>Selamat datang ke Zxra Creation</h2>
-  	  <p>Ini adalah halaman utama dari Zxra Creation<br><br>
-  	  Sebelum itu mari kami perkenalkan diri, Zxra, Zxra adalah sebuah team yang mengembangkan beberapa aplikasi seperti automisasi chat, AI, dan lainnya,
-  	  serta kita juga menyediakan beberapa module tambahan untuk beberapa game yang biasa disebut mod, plugin maupun addon.
-  	  
-  	  </p>
-  	  
-  	  <p class="code">
-  	    <r id="indg">const</r> ZxraClient = require(<r id="grn">'zxra'</r>);<br>
-  	    <r id="indg">const</r> Client = <r id="ylw">new</r> ZxraClient();<br><br>
-  	    <r id="indg">try</r> {<br>
-  	    } <r id="indg">catch</r>(err) {<br>
-  	    }
-  	  </p>
-  	  
-  	  <h2>Sosial Media</h2>
-  	  <p>Berikut sosial media dari Zxra:<br>
-  	  Discord &nbsp;: MKx#7862(Bot)<br>
-  	  Email &nbsp; &nbsp;: zxrabot@gmail.com<br>
-  	  Facebook : <br>
-  	  Github &nbsp; : CrzxaExe<br>
-  	  Instagram: <br>
-  	  Twitter &nbsp;: <br>
-  	  Whatsapp : +62 838-9916-1015<br>
-  	  Youtube &nbsp;: </p>
-  	  
-  	  <h2><i class='bx bx-link' ></i> App & Module</h2><hr>
-  	  <ul>
-  	    <li>
-  	      <a>Mindustry ( Mod )</a>
-  	      <p>Github <a href="https://github.com/CrzxaExe/ZxraDustry">link</a></p>
-  	      <p class="code">
-  	        <r id="grn">/*Import from github by using this in Mindustry<br>
-  	        For now this are outdated but some day we will update this again*/</r><br> <br>
-  	        CrzxaExe/ZxraDustry<br>
-  	        V1.0.4
-  	      </p>
-  	    </li>
-  	    <li>
-  	      <a>Minecraft</a>
-  	      <p>Berfungsi di Minecraft versi 1.20.40<br>
-  	      <p class="code">Better Zxra Bedrock ( Addon )</p></p>
-  	    </li>
-  	  </ul>
-	  </div>
+	    <div class="full-width no-margin flex-horizontal">
+	      <span id="clock"></span>
+	    </div>
+	    <div class="center">
+	      <b><i class='bx bx-cross'></i> Selamat Datang di Zxra Creation</b><hr>
+	      <p class="right-index">Mari kita mulai melakukan perubahan bersama kami<br>
+	      Kami hanya sebuah team kecil yang awalnya hanya ingin mempermudah hidup kami namun malah jadi serius dengan hal tersebut. Membuat kami banyak memulai projek baru dengan tujuan yang berbeda-beda.<br><br>
+	      Eazier Your Life With Us<br><br>
+	      Dengan motto diatas kami akan membuat apapun untuk memudahkan kalian juga. Kami selalu membuka saran dari anda. Kami juga menyediakan beberapa jasa juga sih.
+	      </p>
+	      <img src="./img/zxra.png" alt="logo" class="justify left-index">
+	    </div>
+	    <b>Berita Terbaru</b><hr>
+	    <div class="code" id="news"></div>
 	</div>
 </body>
 </html>
