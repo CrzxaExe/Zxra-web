@@ -447,3 +447,20 @@ body {
   bottom: 0;
   left: 0;
 }
+#updates {
+  margin-bottom: 1.6em;
+}
+.list {
+  white-space: normal;
+  overflow-x: hidden;
+  height: 1.7em;
+  background: #383838;
+}
+.list.open {
+  height: 100%;
+}
+.list .code {
+  white-space: normal;
+  overflow-x: hidden;
+  margin-bottom: .1em;
+}

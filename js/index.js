@@ -2,7 +2,7 @@ const navbar = document.getElementById("nav")
 const zxra = navbar.querySelector("#zxra")
 let ups = document.getElementById("updates")
 
-let bzbProc = { ver: "3.2.4", percen: 1.9 }, bzb = {}
+let bzbProc = { ver: "3.2.4", percen: 17.6 }, bzb = {}
 
 window.addEventListener("load", async () => {
   zxra.addEventListener("click", () => {
@@ -14,20 +14,23 @@ window.addEventListener("load", async () => {
   //console.log(bzb)
   
   // Button
-  document.getElementById("home").addEventListener("click", () => window.location.href="index.html")
-  document.getElementById("bzb").addEventListener("click", () => window.location.href="bzb.html")
-  document.getElementById("galery").addEventListener("click", () => window.location.href="galery.html")
+  document.getElementById("home").addEventListener("click", () => toUrl("index.html"))
+  document.getElementById("bzb").addEventListener("click", () => toUrl("bzb.html"))
+  document.getElementById("galery").addEventListener("click", () => toUrl("galery.html"))
+  document.getElementById("about").addEventListener("click", () => toUrl("zxra.html"))
   document.getElementById("prosbar").textContent = `${bzbProc.percen}%`
   document.getElementById("bar").style.width = `${bzbProc.percen}%`
   document.getElementById("versionup").textContent = bzbProc.ver
   
   // Bzb Download Versions
-  bzb.down.forEach(i => document.getElementById("ver").innerHTML +=`<div><c>${i.ver} | MC ${i.mc}</c><form action='${i.link}'><button type='submit'><i class='bx bxs-download'></i></button></form></div>`)
+  bzb.down.filter(i => i.done !== false).forEach(i => document.getElementById("ver").innerHTML +=`<div><c>${i.ver} | MC ${i.mc}</c><form action='${i.link}'><button type='submit'><i class='bx bxs-download'></i></button></form></div>`)
   document.getElementById("vers").addEventListener("click", () => toggleVer())
   
   // Initialize of update
+  let done = ""
+  if(bzb.down[0].done == false) done = " - Link belum tersedia ini hanya preview dari update"
   ups.innerHTML += `<b>Versi ${bzb.down[0].ver}</b><br>`
-  ups.innerHTML += `<c>${bzb.down[0].info}<br><a href='${bzb.down[0].link}'>Unduh</a></c><br><br>`
+  ups.innerHTML += `<c>${bzb.down[0].info}<br><a href='${bzb.down[0].link}'>Unduh</a>${done}</c><br><br>`
   // Start to texting the update
   let lsk = Object.keys(bzb.down[0].update).sort((a, b) => a.localeCompare(b)), pkjh = 0
   lsk.forEach(l => {
@@ -43,6 +46,14 @@ window.addEventListener("load", async () => {
 // Functions
 function toggleNav(name) {
   document.getElementById(name).classList.toggle("open")
+}
+function toUrl(url) {
+  if(navbar.classList.contains("open")) {
+  toggleNav("nav")
+  toggleNav("mod")
+  }
+  
+  setTimeout(() => window.location.href = url, 500)
 }
 function toggleVer() {
   let vers = document.getElementById("ver")
