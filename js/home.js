@@ -28,13 +28,13 @@ function updateDigitalClock() {
 
 function NewsIn(target, file) {
   let title = document.createElement("b"), img = document.createElement("img"), des = document.createElement("p"), time = document.createElement("c")
-  title.textContent = file.berita.title
+  title.innerHTML = `<i class='bx bx-chalkboard' ></i> ` + file.berita.title + "<br>"
   img.src = file.berita.img
   des.textContent = file.berita.des
   time.innerText = file.berita.stamp
   
   target.appendChild(title)
+  target.appendChild(img)
   target.appendChild(des)
   target.appendChild(time)
-  target.appendChild(img)
 }

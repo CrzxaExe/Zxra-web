@@ -78,7 +78,7 @@
         {
           "name": "blooding",
           "type": "kill",
-          "effect": "Setiap membunuh target, user mendapatkan efek Resistance dan Speed"
+          "effect": "Setiap membunuh target, user mendapatkan efek Resistance dan Speed serta memulihkan 10% total HP user"
         },
         {
           "name": "thornification",
@@ -118,7 +118,15 @@
         "Dps",
         "Debuff"
       ],
-      "wp": 1
+      "wp": 1,
+      "summon": [
+        {
+          "name": "Kyles Sword",
+          "hp": 20,
+          "atk": 0,
+          "trait": "Memblokir semua damage kecuali dari owner. Saat owner menyerang unit ini, unit ini akan berubah state ke Sword Drop dan bisa di ambil lagi untuk menjadi item\n\nUnit ini bisa dipanggil dengan mengetik \"kyle\" pada chat, hanya saja ini berfungsi untuk player tertentu"
+        }
+      ]
     },
     {
       "name": "liberator",
@@ -135,7 +143,7 @@
         {
           "name": "Gets Death",
           "type": "hit",
-          "effect": "Setiap menyerang target, memberikan tanda Liberator sebagai target dari summon, jika menyerang target dengan tanda tadi akan meningkatkan summonan di radius 10 block(setiap summon hanya bisa di upgrade 1 kali)"
+          "effect": "Setiap menyerang target, memberikan tanda Liberator, jika menyerang target dengan tanda tadi akan meningkatkan summonan di radius 10 block(setiap summon hanya bisa di upgrade 1 kali)"
         }
       ],
       "skill": [
@@ -165,7 +173,21 @@
         "AOE",
         "Summon"
       ],
-      "wp": 2
+      "wp": 2,
+      "summon": [
+        {
+          "name": "Angel",
+          "hp": 190,
+          "atk": "65-205",
+          "trait": "Summon ini hanya bertahan selama 20 detik, hanya menyerang target dengan tanda Liberator"
+        },
+        {
+          "name": "angel Liberator",
+          "hp": 190,
+          "atk": "65-205",
+          "trait": "Summon ini hanya bertahan selama 20 detik, hanya menyerang target dengan tanda Liberator, damage yang diterima berkurang 50%"
+        }
+      ]
     },
     {
       "name": "crusher",
@@ -201,6 +223,403 @@
         }
       ],
       "wp": 3
+    },
+    {
+      "name": "silent",
+      "trait": "Setiap menyerang target melayang atau memiliki debuff, damage meningkat 150% Atk",
+      "atk": 12,
+      "rarity": "Unique",
+      "type": "katana",
+      "tag": [
+        "Nuker",
+        "Dps",
+        "Debuff"
+      ],
+      "pasif": [
+        {
+          "name": "In Leaf",
+          "type": "stack",
+          "effect": "Setiap stack akan meningkatan damage serangan normal dan skill"
+        },
+        {
+          "name": "slice",
+          "type": "hit",
+          "effect": "Setiap menyerang memberikan efek Slow Falling ke target"
+        }
+      ],
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Memberikan damage berturut-turut setara 320% Atk dan 220%, user mendapatkan 6 %Leaf dan efek Strength",
+          "stamina": 6
+        },
+        {
+          "skill": "1 - Special",
+          "in": "Saat diaktifkan, memberikan 6 %Leaf dan menyerang target setara %Leaf",
+          "stamina": 2
+        },
+        {
+          "skill": "2",
+          "in": "Saat diaktifkan dash kedepan memberikan efek Speed, untuk 5 detik kedepan setiap serangan mendapatkan 2 %Leaf  serta memberikan tanda Silent dan efek Slowness ke target. Saat durasi selesai, user teleport ke lokasi pertama dan memberikan damage setara 100% Atk + %Leaf ke semua target dengan tanda Silent",
+          "stamina": 8
+        },
+        {
+          "skill": "3",
+          "in": "Menyerang dengan radius 6 block dan memberikan damage 160% Atk dan memberikan efek Slowness ke target",
+          "stamina": 13
+        }
+      ],
+      "wp": 4
+    },
+    {
+      "name": "destiny",
+      "trait": "Setiap serangan memberikan damage tambahan tergantung jarak target",
+      "atk": 10,
+      "type": "spear",
+      "rarity": "unique",
+      "tag": [
+        "Dps",
+        "Force",
+        "Mobility"
+      ],
+      "pasif": [
+        {
+          "name": "Fears",
+          "type": "hit",
+          "effect": "Setiap serangan dan skill memberikan efek Silence, menyerang target dengan tanda Silence meningkatkan + 50% Atk"
+        },
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Mendorong 1 target dan memberikan damage 60% Atk + %Distance, target terkena efek Silence, user terkena efek Weakness",
+          "stamina": 8
+        },
+        {
+          "skill": "1 - Spesial",
+          "in": "Mengunci 1 target dan dash kedepan, memberikan damage ke radius 4 setara 480%",
+          "stamina": 8
+        },
+        {
+          "skill": "2",
+          "in": "Dash ke belakang target dan memberikan damage 160% Atk + %Distance ",
+          "stamina": 10
+        },
+        {
+          "skill": "3",
+          "in": "Dash ke target dan memberikan damage 120% Atk + %Distance, setelah beberapa saat akan menghasilkan ledakan di target dan memberikan damage 330%",
+          "stamina": 14
+        }
+      ],
+      "wp": 5
+    },
+    {
+      "name": "bringer",
+      "trait": "Setiap serangan menghasilkan AOE damage dan memulihkan 1 HP",
+      "atk": 11,
+      "type": "reaper",
+      "rarity": "epic",
+      "tag": [
+        "Dps",
+        "AOE"
+      ],
+      "pasif": [
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Memberikan damage ke radius 4 block setara 130% Atk",
+          "stamina": 4
+        },
+        {
+          "skill": "2",
+          "in": "Teleport ke target dan memberikan damage ke radius 4 block setara 315% Atk",
+          "stamina": 14
+        },
+        {
+          "skill": "3",
+          "in": "Melompat kedepan dan memberikan damage ke radius 7 block setara 315% serta memberikan efek Wither, user mendapatkan efek Resistance",
+          "stamina": 18
+        }
+      ],
+      "wp": 6
+    },
+    {
+      "name": "endless",
+      "trait": "Membutuhkan peluru saat digunakan, auto reload tanpa amunisi apapun",
+      "atk": 3,
+      "type": "gun",
+      "rarity": "unique",
+      "tag": [
+        "Dps",
+        "Spam"
+      ],
+      "pasif": [
+        {
+          "name": "End Point",
+          "type": "unknown",
+          "effect": ""
+        },
+        {
+          "name": "End Ammo",
+          "type": "chance",
+          "effect": "Mempunyai peluang 20% untuk tidak mengkonsumsi ammo"
+        }
+      ],
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Menembakan peluru kearah tujuan dan melakukan dash sesuai arah serta menembakan lagi ke arah tujuan dengan damage 45 Atk, jika ammo kurang dari 2 maka akan auto reload",
+          "stamina": 6
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 7,
+      "ammo": 12
+    },
+    {
+      "name": "skyler",
+      "trait": "Bisa menggunakan elemental/art",
+      "atk": 9,
+      "type": "artsword",
+      "rarity": "unique",
+      "element": "fire",
+      "tag": [
+        "Dps",
+        "Debuff",
+        "DOT"
+      ],
+      "pasif": [
+        {
+          "name": "fireing",
+          "type": "hit",
+          "effect": "Setiap menyerang memberikan efek terbakar. Saat mempunyai stack %Fireing, setiap serangan akan memberikan efek Fire Resistance dan dash"
+        },
+        {
+          "name": "burns",
+          "type": "kill",
+          "effect": "Setiap kali membunuh target, memberikan efek ledakan pada lokasi target"
+        }
+      ],
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Menyerang target secara garis lurus sejauh 7 block dengan 300% Atk dan memberikan 5 %Fireing",
+          "stamina": 6
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 8
+    },
+    {
+      "name": "pandora",
+      "trait": "Bisa menggunakan range dan melee",
+      "atk": 10,
+      "type": "breifcase",
+      "rarity": "unique",
+      "tag": [
+        "Brust",
+        "Dps"
+      ],
+      "pasif": [
+        {
+          "name": "Out Of Box",
+          "type": "unknown",
+          "effect": ""
+        },
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 9
+    },
+    {
+      "name": "catlye",
+      "trait": "Bisa menggunakan skill",
+      "atk": 4,
+      "type": "staff",
+      "rarity": "unique",
+      "tag": [
+        "Heal",
+        "AOE"
+      ],
+      "pasif": [
+        {
+          "name": "Medicine",
+          "type": "unknown",
+          "effect": ""
+        },
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [],
+      "wp": 10
+    },
+    {
+      "name": "lectaze",
+      "trait": "Setiap serangan memberikan damage tambahan tergantung jarak target",
+      "atk": 10,
+      "type": "spear",
+      "rarity": "unique",
+      "tag": [
+        "Dps",
+        "Summon",
+        "Control"
+      ],
+      "pasif": [
+        {
+          "name": "Creations",
+          "type": "unknown",
+          "effect": ""
+        },
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Memberikan damage 220% target dan melemparkan Lectaze Sword yang akan menyerang target setelah 5 detik",
+          "stamina": 7
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 11,
+      "summon": [
+        {
+          "name": "Lectaze Sword",
+          "hp": 10,
+          "atk": 5,
+          "trait": "Unit ini bertahan selama 10 detik, menyerang target dengan tanda Lectaze"
+        }
+      ]
+    },
+    {
+      "name": "boltizer",
+      "trait": "Bisa menggunakan elemental/art",
+      "atk": 9,
+      "type": "artsword",
+      "rarity": "unique",
+      "tag": [
+        "Debuff",
+        "Brust"
+      ],
+      "pasif": [
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        },
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 12
     }
   ]
 }

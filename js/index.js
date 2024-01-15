@@ -29,7 +29,7 @@ window.addEventListener("load", async () => {
   // Initialize of update
   let done = ""
   if(bzb.down[0].done == false) done = " - Link belum tersedia ini hanya preview dari update"
-  ups.innerHTML += `<b>Versi ${bzb.down[0].ver}</b><br>`
+  ups.innerHTML += `<b><i class='bx bx-paperclip' ></i> Versi ${bzb.down[0].ver}</b><br>`
   ups.innerHTML += `<c>${bzb.down[0].info}<br><a href='${bzb.down[0].link}'>Unduh</a>${done}</c><br><br>`
   // Start to texting the update
   let lsk = Object.keys(bzb.down[0].update).sort((a, b) => a.localeCompare(b)), pkjh = 0
@@ -59,6 +59,6 @@ function toggleVer() {
   let vers = document.getElementById("ver")
   vers.classList.toggle("open")
   if(vers.className.includes("open")) {
-    vers.querySelector("#vers").textContent = "/ Version"
-  } else vers.querySelector("#vers").textContent = "- Version"
+    vers.querySelector("#vers").innerHTML = "<i class='bx bx-poll' ></i> Version"
+  } else vers.querySelector("#vers").innerHTML = "<i class='bx bx-list-ul' ></i> Version"
 }

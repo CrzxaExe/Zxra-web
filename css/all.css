@@ -336,7 +336,7 @@ body {
   display: flex;
   width: calc(100% - 6px);
   padding: 3px 6px;
-  font-size: 1.04em;
+  font-size: 1.14em;
   border-radius: 2px;
   align-items: center;
   height: auto;
@@ -350,11 +350,12 @@ body {
   background: #242424;
   border: 0 solid black;
   font-size: 0.9em;
-  max-width: 1.5em;
+  border-radius: .2em;
+  max-width: 1.8em;
   position: relative;
 }
 .drop button i {
-  left: -.18em;
+  left: -.12em;
   text-align: left;
   position: relative;
 }
@@ -452,15 +453,41 @@ body {
 }
 .list {
   white-space: normal;
-  overflow-x: hidden;
-  height: 1.7em;
+  overflow-y: hidden;
+  position: relative;
+  height: 2.6vw;
+  max-height: 2.6vw;
   background: #383838;
 }
 .list.open {
   height: 100%;
+  max-height: 100%;
 }
 .list .code {
   white-space: normal;
-  overflow-x: hidden;
+  overflow-y: hidden;
   margin-bottom: .1em;
+}
+.list .cra {
+  display: flex;
+  position: relative;
+  justify-content: left;
+  justify-items: left;
+  align-items: left;
+  align-content: left;
+}
+.list .cra b {
+  padding: 0;
+  margin: 0 4px;
+}
+.icon {
+  width: 14px;
+  height: 14px;
+  max-height: 13px;
+  max-width: 13px;
+  object-fit: contain;
+  padding: -13px;
+  margin: 0vw;
+  filter: brightness(100%) grayscale(100%);
+  left: 0;
 }
