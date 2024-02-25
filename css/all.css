@@ -395,6 +395,7 @@ body {
   font-weight: bold;
   display: block;
   position: absolute;
+  top: -.6em;
   left: 0%;
   transform: translateY(2vw);
   z-index: 0;

@@ -1,0 +1,16 @@
+.eng {
+  position: absolute;
+  top: 10%;
+  width: 60vw;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.content {
+  height: 100%;
+}
+#search {
+
+}
+#search::placeholder {
+  background: #15151550;
+}

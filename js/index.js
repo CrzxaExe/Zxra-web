@@ -2,7 +2,7 @@ const navbar = document.getElementById("nav")
 const zxra = navbar.querySelector("#zxra")
 let ups = document.getElementById("updates")
 
-let bzbProc = { ver: "3.2.4", percen: 17.6 }, bzb = {}
+let bzbProc = { ver: "3.2.4", percen: 19.3 }, bzb = {}
 
 window.addEventListener("load", async () => {
   zxra.addEventListener("click", () => {
@@ -18,6 +18,9 @@ window.addEventListener("load", async () => {
   document.getElementById("bzb").addEventListener("click", () => toUrl("bzb.html"))
   document.getElementById("galery").addEventListener("click", () => toUrl("galery.html"))
   document.getElementById("about").addEventListener("click", () => toUrl("zxra.html"))
+  document.getElementById("khyrowa").addEventListener("click", () => toUrl("wa.html"))
+  document.getElementById("mkx").addEventListener("click", () => toUrl("mkx.html"))
+  document.getElementById("dustry").addEventListener("click", () => toUrl("dustry.html"))
   document.getElementById("prosbar").textContent = `${bzbProc.percen}%`
   document.getElementById("bar").style.width = `${bzbProc.percen}%`
   document.getElementById("versionup").textContent = bzbProc.ver
@@ -30,7 +33,7 @@ window.addEventListener("load", async () => {
   let done = ""
   if(bzb.down[0].done == false) done = " - Link belum tersedia ini hanya preview dari update"
   ups.innerHTML += `<b><i class='bx bx-paperclip' ></i> Versi ${bzb.down[0].ver}</b><br>`
-  ups.innerHTML += `<c>${bzb.down[0].info}<br><a href='${bzb.down[0].link}'>Unduh</a>${done}</c><br><br>`
+  ups.innerHTML += `<c>${bzb.down[0].info.replace(/\n/gi, "<br>")}<br><a href='${bzb.down[0].link}'>Unduh</a>${done}</c><br><br>`
   // Start to texting the update
   let lsk = Object.keys(bzb.down[0].update).sort((a, b) => a.localeCompare(b)), pkjh = 0
   lsk.forEach(l => {

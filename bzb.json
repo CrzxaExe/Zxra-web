@@ -4,39 +4,59 @@
       "ver": "2.8.7",
       "mc": "1.20.40",
       "link": "",
-      "info": "Some Random Update",
+      "info": "Some Random Update\n\nKali ini lebih menambahkan fitur yang kalian sarankan",
       "update": {
         "game": [
           "Menambahkan sistem Misi/Tugas",
           "Menambahkan menu Toko",
           "Menambahkan menu Pengguna",
           "Menambahkan beberapa block tipe elektronik dengan mekanik baru",
-          "Memperhalus world",
           "Menambahkan beberapa item baru",
           "Menduplikat Entity dari Addon tambahan Zxra API",
           "Mengubah barang yang dijual oleh Wandering Trader",
-          "Sekarang ore baru sudah di distribusikan ke cave dan dimensi The End"
+          "Menambahkan blok funitur baru",
+          "Beberapa UI ingame telah menampilkan player dan health player",
+          "Menambahkan resep ramuan di Brewing Stand",
+          "Penambahan fitur duduk",
+          "Menambahkan audio baru"
         ],
         "technical": [
           "Memperbaiki bug",
           "Memoles beberapa skript dan menyederhanakan file",
-          "Menambahkan class:\n• BlockData\n• BlockInventory\n• Game\n• Quest\n• Tile",
+          "Menambahkan class:\n• BlockData\n• BlockInventory\n• BlockUi\n• Game\n• Quest\n• Tile",
           "Menambahkan beberapa function baru",
           "Menambahkan metode baru dalam class:\n• Entity\n• Specialist",
           "Menghapus recipe unlock di banyak item",
           "Meningkatan pendapatan stamina dari meminum air bersih",
-          "Kecepatan pemulihan stamina menjadi 2/detik"
+          "Kecepatan pemulihan stamina menjadi 2/detik",
+          "Toko akan bertambah mahal seiiring berjalannya waktu",
+          "Sekarang hanya ada 14 Misi, yang bisa didapetin acak dan sesuai dengan reputasimu",
+          "Mengubah lagi beberapa pesan kematian"
         ],
         "entity": [
           "Boss Kyle mendapatkan perubahan:\n+ Animasi Spawn\n+ Mereanimasi animasi lama\n+ Variasi Attack ke 4 & 5",
           "Boss Ender Dragon mendapatkan perubahan",
-          "Entity Angel sekarang bisa diupgrade"
+          "Entity Angel sekarang bisa diupgrade",
+          "Senjata Kyle bisa didrop dan akan mengikuti player"
         ],
         "weapon": [
-          "Senjata baru:\n• Catlye  [Staff - Unique]\n• Endless [Gun - Unique]\n• Lectaze [Spear - Unique]\n• Pandora [Breifcase - Unique]\n• Skyler  [ArtSword - Unique]",
+          "Senjata baru:\n• Boltizer [Artsword - Unique]\n• Catlye  [Staff - Unique]\n• Destreza [Artsword - Unique]\n• Endless [Gun - Unique]\n• Lectaze [Spear - Unique]\n• Pandora [Breifcase - Unique]\n• Quezn [Century - Unique]\n• Skyler  [ArtSword - Unique]",
           "Menurunkan max damage pasif normal attack senjata tipe:\n• Slayer\n• Hammer",
-          "Senjata Kyles: Mengurangi kenaikan damage dari %Charge dan menaikan raw damage Skill",
-          "Pengubahan pasif senjata menjadi sifat dari senjata, senjata lama akan mendapatkan pasif baru"
+          "Senjata Kyles: Mengurangi kenaikan damage dari %Charge dan menaikan raw damage Skill\n+ Ultimate Skill",
+          "Pengubahan pasif senjata menjadi sifat dari senjata, senjata lama akan mendapatkan pasif baru",
+          "Perubahan slot pasif untuk rarity senjata"
+        ],
+        "block": [
+          "Bijih berlian sekarang memiliki tekstur beranimasi",
+          "Bijih besi (normal & deepslate) mendapatkan variasi baru",
+          "Furnitur baru yaitu kursi (semua variasi kayu)"
+        ],
+        "world": [
+          "Menambah variasi pohon oak",
+          "Memperhalus world",
+          "Sekarang ore baru sudah di distribusikan ke cave dan dimensi The End",
+          "Menambahkan bioma baru: Birchy",
+          "Menambahkan beberapa struktur baru"
         ]
       },
       "done": false
@@ -62,15 +82,16 @@
   ],
   "galery": [],
   "berita": {
-    "title": "Launching Better Zxra Bedrock",
+    "title": "Some Random Update - Better Zxra Bedrock",
     "img": "./img/bzb.png",
-    "des": "Uploading Versi terbaru Better Zxra Bedrock(BZB)\nUpdate besar, dengan memperbaiki beberapa bug yg mengganggu.\nSelengkapnya bisa di cek di Project/Better Zxra Bedrock",
-    "stamp": "3 Desember 2023"
+    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB\nKalian bisa cek projeknya\n\nMc Versi: 1.20.\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.0.6",
+    "stamp": "Sekarang",
+    "link": "https://crzxaexe.github.io/Zxra-web/bzb.html"
   },
   "weapon": [
     {
       "name": "kyles",
-      "trait": "Setiap serangan menghasilkan damage tambahan setara %HP yang hilang + %HP target, memberikan efek Wither",
+      "trait": "Setiap serangan menghasilkan damage tambahan setara %HP user + 20%HP target, memberikan efek Wither",
       "atk": 2,
       "rarity": "unique",
       "type": "slayer",
@@ -83,7 +104,7 @@
         {
           "name": "thornification",
           "type": "def",
-          "effect": "Setiap diserang target, target menerima counter damage setara 200% Atk + %HP user yang tersisa"
+          "effect": "Setiap diserang target, target menerima counter damage setara 200% Atk + %HP user yang hilang"
         }
       ],
       "skill": [
@@ -244,7 +265,7 @@
         {
           "name": "slice",
           "type": "hit",
-          "effect": "Setiap menyerang memberikan efek Slow Falling ke target"
+          "effect": "Setiap menyerang mempunyai 20% kesempatan untuk memberikan efek Slow Falling serta knock up ke target"
         }
       ],
       "skill": [
@@ -289,9 +310,9 @@
           "effect": "Setiap serangan dan skill memberikan efek Silence, menyerang target dengan tanda Silence meningkatkan + 50% Atk"
         },
         {
-          "name": "",
-          "type": "unknown",
-          "effect": ""
+          "name": "Gl-3T",
+          "type": "hit",
+          "effect": "Saat menyerang target dengan efek Silence, jika Max HP target lebih banyak dari target, Atk + 25%HP target"
         }
       ],
       "skill": [
@@ -326,13 +347,14 @@
       "rarity": "epic",
       "tag": [
         "Dps",
-        "AOE"
+        "AOE",
+        "Survival"
       ],
       "pasif": [
         {
-          "name": "",
-          "type": "unknown",
-          "effect": ""
+          "name": "Slay Benefit",
+          "type": "Kill",
+          "effect": "Setiap membunuh target, memulihkan 20% HP"
         }
       ],
       "skill": [
@@ -367,13 +389,13 @@
       "pasif": [
         {
           "name": "End Point",
-          "type": "unknown",
-          "effect": ""
+          "type": "reload",
+          "effect": "Saat mereload, menghilangkan semua efek negatif yang ada pada user serta, memberikan efek speed"
         },
         {
           "name": "End Ammo",
           "type": "chance",
-          "effect": "Mempunyai peluang 20% untuk tidak mengkonsumsi ammo"
+          "effect": "Mempunyai peluang 20% untuk tidak mengkonsumsi ammo dan mereplishnya"
         }
       ],
       "skill": [
@@ -383,9 +405,9 @@
           "stamina": 6
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "2",
+          "in": "Instant reload dan memberikan efek Speed serta Resistance, menghilangkan debuff",
+          "stamina": 10
         },
         {
           "skill": "",
@@ -432,19 +454,19 @@
           "stamina": 6
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "2",
+          "in": "Menyerang target dengan radius 5 block, mengknockup target serta membakar semua yang ada di range, force knockup setara %Charge dan memberikan damage 400%",
+          "stamina": 12
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "3",
+          "in": "Menyerang 1 target 5 kali setara 100% Atk dan user dash ke target",
+          "stamina": 10
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "Special",
+          "in": "Casting, selama 15 detik akan membakar daerah sekitar user dan memberikan damage 100% setiap 0.25 detik dengan radius 7",
+          "stamina": 14
         }
       ],
       "wp": 8
@@ -497,7 +519,7 @@
     },
     {
       "name": "catlye",
-      "trait": "Bisa menggunakan skill",
+      "trait": "Bisa menggunakan skill<br>\n[Medic] Bisa menyembuhkan target dengan menyerang atau dengan skillnya",
       "atk": 4,
       "type": "staff",
       "rarity": "unique",
@@ -508,17 +530,39 @@
       "pasif": [
         {
           "name": "Medicine",
-          "type": "unknown",
-          "effect": ""
+          "type": "heal",
+          "effect": "Bisa menyembuhkan target lain jika itu player atau entitas yang sudah dijinakan setara 50% Atk"
         },
         {
-          "name": "",
-          "type": "unknown",
-          "effect": ""
+          "name": "Don't Fall",
+          "type": "Heal",
+          "effect": "Jika menyembukan target yang HPnya dibawah 25% HP heal meningkat menjadi 150% Heal"
         }
       ],
-      "skill": [],
-      "wp": 10
+      "skill": [
+        {
+          "skill": "1",
+          "in": "Menyembuhkan 1 target setara 100% Atk, jika tidak ada target akan mengeheal diri sendiri(jarak maksimal 9 block)\nSetiap 3 kali menggunakan skill ini, selanjutnya skill akam berubah menjadi Skill Spesial",
+          "stamina": 20
+        },
+        {
+          "skill": "1 - Spesial",
+          "in": "Menyembuhkan semua target secara garis lurus setara 150% Atk, tidak termasuk usernya( jarak maksimal 15 block)",
+          "stamina": 22
+        },
+        {
+          "skill": "2",
+          "in": "Menyembuhkan ke sekitar user radius 7 block  setara 150%, user termasuk kedalam areanya",
+          "stamina": 24
+        },
+        {
+          "skill": "3",
+          "in": "Casting dan menyembuhkan target disekitar user radius 7 block selama 15 detik setiap 0.5 detik, penyembuhan setara 25% Atk dan mengurangi 1 stamina selama durasi",
+          "stamina": 8
+        }
+      ],
+      "wp": 10,
+      "subType": "Medic"
     },
     {
       "name": "lectaze",
@@ -534,8 +578,8 @@
       "pasif": [
         {
           "name": "Creations",
-          "type": "unknown",
-          "effect": ""
+          "type": "stack",
+          "effect": "Setiap menyerang mendapatkan 1 %Creations, setiap %Creations akan menambah damage normal attack sebanyak 1 Atk, maks 5 Stack"
         },
         {
           "name": "",
@@ -550,14 +594,14 @@
           "stamina": 7
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "2",
+          "in": "Menyerang target yang berada di radius 6 block sesuai dengan jumlah %Creations, memberikan damage 450%",
+          "stamina": 12
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "3",
+          "in": "Melakukan slash kedepan yang akan menghasilkan 500% Atk",
+          "stamina": 9
         },
         {
           "skill": "",
@@ -587,8 +631,104 @@
       ],
       "pasif": [
         {
+          "name": "electicity",
+          "type": "stack",
+          "effect": "Ketika menyerang target atau dari skill, memberikan tanda Bolt: memberikan efek Slowness, saat tanda dari attack bertemu dengan skill atau sebaliknya memberikan Petir yang langsung menyambar target"
+        },
+        {
+          "name": "ArChain",
+          "type": "hit",
+          "effect": "Setiap serangan akan memberikan damage pantulan 2/3% Atk"
+        }
+      ],
+      "skill": [
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 12,
+      "element": "lighting"
+    },
+    {
+      "name": "destreza",
+      "trait": "Bisa menggunakan elemental/art",
+      "atk": 9,
+      "type": "artsword",
+      "rarity": "unique",
+      "tag": [
+        "Debuff",
+        "Dps",
+        "Poison"
+      ],
+      "pasif": [
+        {
+          "name": "Thornifi",
+          "type": "def",
+          "effect": "Ketika di serang saat Charge, memberikan damage area 5 block setara 100% Atk dan memberikan efek Poison"
+        },
+        {
           "name": "",
           "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "wp": 13,
+      "element": "poison"
+    },
+    {
+      "name": "quezn",
+      "trait": "Setiap serangan menghasilkan AOE dalam radius 1.5 block",
+      "atk": 14,
+      "type": "century",
+      "rarity": "unique",
+      "tag": [
+        "AOE",
+        "Dps",
+        "Survival"
+      ],
+      "pasif": [
+        {
+          "name": "",
+          "type": "Unknown",
           "effect": ""
         },
         {
@@ -619,7 +759,7 @@
           "stamina": 0
         }
       ],
-      "wp": 12
+      "wp": 14
     }
   ]
 }

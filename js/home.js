@@ -27,14 +27,17 @@ function updateDigitalClock() {
 }
 
 function NewsIn(target, file) {
-  let title = document.createElement("b"), img = document.createElement("img"), des = document.createElement("p"), time = document.createElement("c")
-  title.innerHTML = `<i class='bx bx-chalkboard' ></i> ` + file.berita.title + "<br>"
+  let title = document.createElement("b"), img = document.createElement("img"), des = document.createElement("p"), time = document.createElement("c"), link = document.createElement("a")
+  title.innerHTML = `<i class='bx bx-chalkboard' ></i> ` + file.berita.title + "<br><br>"
+  link.href = file.berita.link
+  link.innerText = file.berita.link
   img.src = file.berita.img
   des.textContent = file.berita.des
-  time.innerText = file.berita.stamp
+  time.innerText = "\n\n"+file.berita.stamp
   
   target.appendChild(title)
   target.appendChild(img)
   target.appendChild(des)
+  target.appendChild(link)
   target.appendChild(time)
 }
