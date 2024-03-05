@@ -18,7 +18,10 @@
           "Beberapa UI ingame telah menampilkan player dan health player",
           "Menambahkan resep ramuan di Brewing Stand",
           "Penambahan fitur duduk",
-          "Menambahkan audio baru"
+          "Menambahkan audio baru",
+          "Menambahkan fitur lokasi terakhir saat mati",
+          "Menambahkan cooldown senjata",
+          "Menambahkan fitur pihak ketiga"
         ],
         "technical": [
           "Memperbaiki bug",
@@ -36,11 +39,11 @@
         "entity": [
           "Boss Kyle mendapatkan perubahan:\n+ Animasi Spawn\n+ Mereanimasi animasi lama\n+ Variasi Attack ke 4 & 5",
           "Boss Ender Dragon mendapatkan perubahan",
-          "Entity Angel sekarang bisa diupgrade",
+          "Entity Angel di reworking",
           "Senjata Kyle bisa didrop dan akan mengikuti player"
         ],
         "weapon": [
-          "Senjata baru:\n• Boltizer [Artsword - Unique]\n• Catlye  [Staff - Unique]\n• Destreza [Artsword - Unique]\n• Endless [Gun - Unique]\n• Lectaze [Spear - Unique]\n• Pandora [Breifcase - Unique]\n• Quezn [Century - Unique]\n• Skyler  [ArtSword - Unique]",
+          "Senjata baru:\n• Berserk [Greatsword - Epic]\n• Boltizer [Artsword - Unique]\n• Catlye  [Staff - Unique]\n• Destreza [Artsword - Unique]\n• Endless [Gun - Unique]\n• Lectaze [Spear - Unique]\n• Pandora [Breifcase - Unique]\n• Quezn [Century - Unique]\n• Skyler  [ArtSword - Unique]",
           "Menurunkan max damage pasif normal attack senjata tipe:\n• Slayer\n• Hammer",
           "Senjata Kyles: Mengurangi kenaikan damage dari %Charge dan menaikan raw damage Skill\n+ Ultimate Skill",
           "Pengubahan pasif senjata menjadi sifat dari senjata, senjata lama akan mendapatkan pasif baru",
@@ -111,7 +114,8 @@
         {
           "skill": "1",
           "in": "Menyerang secara garis lurus tak terhingga, memberikan damage 1200% Atk + %Charge, dash ke depan dan memberikan efek Strength",
-          "stamina": 3
+          "stamina": 3,
+          "cd": 3
         },
         {
           "skill": "1 - Spesial",
@@ -121,7 +125,8 @@
         {
           "skill": "2",
           "in": "Dash ketujuan, jarak setara %Charge, memberikan damage ke radius 4.5 block setara 1300% Atk + %Charge",
-          "stamina": 6
+          "stamina": 6,
+          "cd": 4
         },
         {
           "skill": "3",
@@ -130,8 +135,10 @@
         },
         {
           "skill": "Ultimate",
-          "in": "Inisiasi beberapa saat, mengunci 1 target, dash 10 block / ke target dan memberikan mas damage setara 2000% + %HP target ke radius 7 block",
-          "stamina": 11
+          "in": "Inisiasi beberapa saat, mengunci 1 target, dash 10 block / ke target dan memberikan mass damage setara 2000% + %HP target ke radius 7 block",
+          "stamina": 11,
+          "cd": 12,
+          "duration": 1.8
         }
       ],
       "tag": [
@@ -171,28 +178,34 @@
         {
           "skill": "1",
           "in": "Memberikan damage ke radius 5 block setara 300% Atk + %Soul, memulihkan 5 HP dan memberikan efek Speed ke user",
-          "stamina": 4
+          "stamina": 4,
+          "cd": 3
         },
         {
           "skill": "2",
           "in": "Memberikan damage ke 1 target setara 250% + %Soul, setelah beberapa saat user akan terteleportasi ke lokasi target dan memberikan knockback serta efek Poison dan Slowness ke target, menghilangkan debuff Weakness dari user",
-          "stamina": 10
+          "stamina": 10,
+          "cd": 6
         },
         {
           "skill": "3",
           "in": "Membutuhkan 3 %Soul, saat diaktifkan user kebal dari semua serangan apapun dan mendapatkan efek speed untuk 5 detik, mengonsumsi %Soul",
-          "stamina": 7
+          "stamina": 7,
+          "cd": 12
         },
         {
           "skill": "Spesial",
           "in": "Melompat kedepan dan memberikan damage ke radius 5 block setara 300% + %Soul, user mendapatkan efek Regenerasi dan memulihkan HP sesuai %Soul, memanggil Angel di lokasi awal",
-          "stamina": 12
+          "stamina": 12,
+          "cd": 14
         }
       ],
       "tag": [
         "Dps",
         "AOE",
-        "Summon"
+        "Summon",
+        "Heal",
+        "Survival"
       ],
       "wp": 2,
       "summon": [
@@ -206,7 +219,7 @@
           "name": "angel Liberator",
           "hp": 190,
           "atk": "65-205",
-          "trait": "Summon ini hanya bertahan selama 20 detik, hanya menyerang target dengan tanda Liberator, damage yang diterima berkurang 50%"
+          "trait": "Summon ini hanya bertahan selama 30 detik, hanya menyerang target dengan tanda Liberator, damage yang diterima berkurang 50%, move speed +20%"
         }
       ]
     },
@@ -230,17 +243,20 @@
         {
           "skill": "1",
           "in": "Mendorong target dan memberikan damage 160% Atk + %Charge serta memberikan efek Silence",
-          "stamina": 8
+          "stamina": 8,
+          "cd": 3
         },
         {
           "skill": "2",
           "in": "Memberikan damage ke radius 6 block setara 100% Atk + %Charge",
-          "stamina": 10
+          "stamina": 10,
+          "cd": 5
         },
         {
           "skill": "3",
           "in": "Menyerang 1 target dan memberikan damage 140% + %Charge serta memberikan efek Slowness",
-          "stamina": 19
+          "stamina": 19,
+          "cd": 6
         }
       ],
       "wp": 3
@@ -272,22 +288,26 @@
         {
           "skill": "1",
           "in": "Memberikan damage berturut-turut setara 320% Atk dan 220%, user mendapatkan 6 %Leaf dan efek Strength",
-          "stamina": 6
+          "stamina": 6,
+          "cd": 1.5
         },
         {
           "skill": "1 - Special",
           "in": "Saat diaktifkan, memberikan 6 %Leaf dan menyerang target setara %Leaf",
-          "stamina": 2
+          "stamina": 2,
+          "cd": 3
         },
         {
           "skill": "2",
           "in": "Saat diaktifkan dash kedepan memberikan efek Speed, untuk 5 detik kedepan setiap serangan mendapatkan 2 %Leaf  serta memberikan tanda Silent dan efek Slowness ke target. Saat durasi selesai, user teleport ke lokasi pertama dan memberikan damage setara 100% Atk + %Leaf ke semua target dengan tanda Silent",
-          "stamina": 8
+          "stamina": 8,
+          "cd": 10
         },
         {
           "skill": "3",
           "in": "Menyerang dengan radius 6 block dan memberikan damage 160% Atk dan memberikan efek Slowness ke target",
-          "stamina": 13
+          "stamina": 13,
+          "cd": 6
         }
       ],
       "wp": 4
@@ -319,7 +339,8 @@
         {
           "skill": "1",
           "in": "Mendorong 1 target dan memberikan damage 60% Atk + %Distance, target terkena efek Silence, user terkena efek Weakness",
-          "stamina": 8
+          "stamina": 8,
+          "cd": 2
         },
         {
           "skill": "1 - Spesial",
@@ -329,12 +350,14 @@
         {
           "skill": "2",
           "in": "Dash ke belakang target dan memberikan damage 160% Atk + %Distance ",
-          "stamina": 10
+          "stamina": 10,
+          "cd": 6
         },
         {
           "skill": "3",
           "in": "Dash ke target dan memberikan damage 120% Atk + %Distance, setelah beberapa saat akan menghasilkan ledakan di target dan memberikan damage 330%",
-          "stamina": 14
+          "stamina": 14,
+          "cd": 10
         }
       ],
       "wp": 5
@@ -348,7 +371,8 @@
       "tag": [
         "Dps",
         "AOE",
-        "Survival"
+        "Survival",
+        "Heal"
       ],
       "pasif": [
         {
@@ -361,17 +385,20 @@
         {
           "skill": "1",
           "in": "Memberikan damage ke radius 4 block setara 130% Atk",
-          "stamina": 4
+          "stamina": 4,
+          "cd": 1.5
         },
         {
           "skill": "2",
           "in": "Teleport ke target dan memberikan damage ke radius 4 block setara 315% Atk",
-          "stamina": 14
+          "stamina": 14,
+          "cd": 5
         },
         {
           "skill": "3",
           "in": "Melompat kedepan dan memberikan damage ke radius 7 block setara 315% serta memberikan efek Wither, user mendapatkan efek Resistance",
-          "stamina": 18
+          "stamina": 18,
+          "cd": 8
         }
       ],
       "wp": 6
@@ -402,22 +429,26 @@
         {
           "skill": "1",
           "in": "Menembakan peluru kearah tujuan dan melakukan dash sesuai arah serta menembakan lagi ke arah tujuan dengan damage 45 Atk, jika ammo kurang dari 2 maka akan auto reload",
-          "stamina": 6
+          "stamina": 6,
+          "cd": 0.5
         },
         {
           "skill": "2",
           "in": "Instant reload dan memberikan efek Speed serta Resistance, menghilangkan debuff",
-          "stamina": 10
+          "stamina": 10,
+          "cd": 2.5
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "3",
+          "in": "Menyerang target yang ada didepan sejauh 9 block, memberikan knockback dan damage 2000% Atk",
+          "stamina": 10,
+          "cd": 5
         },
         {
-          "skill": "",
+          "skill": "Spesial",
           "in": "",
-          "stamina": 0
+          "stamina": 8,
+          "cd": 3
         }
       ],
       "wp": 7,
@@ -451,22 +482,27 @@
         {
           "skill": "1",
           "in": "Menyerang target secara garis lurus sejauh 7 block dengan 300% Atk dan memberikan 5 %Fireing",
-          "stamina": 6
+          "stamina": 6,
+          "cd": 3
         },
         {
           "skill": "2",
           "in": "Menyerang target dengan radius 5 block, mengknockup target serta membakar semua yang ada di range, force knockup setara %Charge dan memberikan damage 400%",
-          "stamina": 12
+          "stamina": 12,
+          "cd": 5
         },
         {
           "skill": "3",
           "in": "Menyerang 1 target 5 kali setara 100% Atk dan user dash ke target",
-          "stamina": 10
+          "stamina": 10,
+          "cd": 8
         },
         {
           "skill": "Special",
-          "in": "Casting, selama 15 detik akan membakar daerah sekitar user dan memberikan damage 100% setiap 0.25 detik dengan radius 7",
-          "stamina": 14
+          "in": "Casting, selama durasi akan membakar daerah sekitar user dan memberikan damage 100% setiap 0.25 detik dengan radius 9 block",
+          "stamina": 14,
+          "cd": 20,
+          "duration": 15
         }
       ],
       "wp": 8
@@ -478,7 +514,7 @@
       "type": "breifcase",
       "rarity": "unique",
       "tag": [
-        "Brust",
+        "Nuker",
         "Dps"
       ],
       "pasif": [
@@ -543,22 +579,27 @@
         {
           "skill": "1",
           "in": "Menyembuhkan 1 target setara 100% Atk, jika tidak ada target akan mengeheal diri sendiri(jarak maksimal 9 block)\nSetiap 3 kali menggunakan skill ini, selanjutnya skill akam berubah menjadi Skill Spesial",
-          "stamina": 20
+          "stamina": 20,
+          "cd": 1.5
         },
         {
           "skill": "1 - Spesial",
           "in": "Menyembuhkan semua target secara garis lurus setara 150% Atk, tidak termasuk usernya( jarak maksimal 15 block)",
-          "stamina": 22
+          "stamina": 22,
+          "cd": 3
         },
         {
           "skill": "2",
           "in": "Menyembuhkan ke sekitar user radius 7 block  setara 150%, user termasuk kedalam areanya",
-          "stamina": 24
+          "stamina": 24,
+          "cd": 25
         },
         {
           "skill": "3",
-          "in": "Casting dan menyembuhkan target disekitar user radius 7 block selama 15 detik setiap 0.5 detik, penyembuhan setara 25% Atk dan mengurangi 1 stamina selama durasi",
-          "stamina": 8
+          "in": "Casting dan menyembuhkan target disekitar user radius 7 block setiap 0.5 detik, penyembuhan setara 25% Atk dan mengurangi 1 stamina selama durasi",
+          "stamina": 8,
+          "cd": 8,
+          "duration": 15
         }
       ],
       "wp": 10,
@@ -591,17 +632,20 @@
         {
           "skill": "1",
           "in": "Memberikan damage 220% target dan melemparkan Lectaze Sword yang akan menyerang target setelah 5 detik",
-          "stamina": 7
+          "stamina": 7,
+          "cd": 1.5
         },
         {
           "skill": "2",
           "in": "Menyerang target yang berada di radius 6 block sesuai dengan jumlah %Creations, memberikan damage 450%",
-          "stamina": 12
+          "stamina": 12,
+          "cd": 4
         },
         {
           "skill": "3",
           "in": "Melakukan slash kedepan yang akan menghasilkan 500% Atk",
-          "stamina": 9
+          "stamina": 9,
+          "cd": 8.5
         },
         {
           "skill": "",
@@ -627,7 +671,7 @@
       "rarity": "unique",
       "tag": [
         "Debuff",
-        "Brust"
+        "Nuker"
       ],
       "pasif": [
         {
@@ -638,7 +682,7 @@
         {
           "name": "ArChain",
           "type": "hit",
-          "effect": "Setiap serangan akan memberikan damage pantulan 2/3% Atk"
+          "effect": "Setiap serangan akan memberikan damage pantulan 2/3% Atk kepada target yang belum terkena tanda Bolt"
         }
       ],
       "skill": [
@@ -723,18 +767,19 @@
       "tag": [
         "AOE",
         "Dps",
-        "Survival"
+        "Survival",
+        "Def"
       ],
       "pasif": [
         {
-          "name": "",
-          "type": "Unknown",
-          "effect": ""
+          "name": "Gaslt",
+          "type": "Def",
+          "effect": "Memberikan efek resistance ke user setiap diserang"
         },
         {
-          "name": "",
-          "type": "unknown",
-          "effect": ""
+          "name": "R-amx",
+          "type": "Passive",
+          "effect": "Setiap kali menggunakan skill, akan memberikan shield yang bisa menahan 1 attack dari semua jenis damage(tidak dapat distack)"
         }
       ],
       "skill": [
@@ -760,6 +805,52 @@
         }
       ],
       "wp": 14
+    },
+    {
+      "name": "berserk",
+      "trait": "Saat menyerang menggunakan attack, damage meningkat 200%(maks) ketika sudah di charge",
+      "atk": 12,
+      "type": "greatsword",
+      "rarity": "Epic",
+      "pasif": [
+        {
+          "name": "",
+          "type": "unknown",
+          "effect": ""
+        }
+      ],
+      "skill": [
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        },
+        {
+          "skill": "",
+          "in": "",
+          "stamina": 0
+        }
+      ],
+      "tag": [
+        "Dps",
+        "Nuker"
+      ],
+      "wp": 15
+    }
+  ],
+  "party": [
+    {
+      "name": "dash",
+      "desc": "Menjalankan script untuk pengirim agar melakukan dash kedepan",
+      "use": [
+        "horizontal",
+        "vertikal"
+      ]
     }
   ]
 }

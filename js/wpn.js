@@ -9,7 +9,8 @@ weapon = {
   katana: "../../img/icon/katana.png",
   artsword: "../../img/icon/artsword.png",
   breifcase: "../../img/icon/breifcase.png",
-  century: "../../img/icon/century.png"
+  century: "../../img/icon/century.png",
+  greatsword: "../../img/icon/greatsword.png"
 }
 
 window.onload = Wpns()
@@ -30,10 +31,13 @@ function displayWeapon() {
     if(i.subType !== undefined) subType = ` - ${i.subType.charAt(0).toUpperCase() + i.subType.slice(1)}`
     i.tag.forEach(t => tag += `, ${t}`)
     i.pasif.forEach(j => {
-      pasif += `<br><br>[${j.name.charAt(0).toUpperCase() + j.name.slice(1)}] - ${j.type.charAt(0).toUpperCase() + j.type.slice(1)}<br>${j.effect}`
+      pasif += `<br><br><font color="yellow">[${j.name.charAt(0).toUpperCase() + j.name.slice(1)}]</font> - <font color=lightred">${j.type.charAt(0).toUpperCase() + j.type.slice(1)}</font><br>${j.effect}`
     })
     i.skill.forEach(s => {
-      skill += `<br><br>[${s.skill}], Stamina ${s.stamina}<br>${s.in}`
+      let cd = "", duration = ""
+      if(s.cd) cd = `, <font color="lightred">Cooldown ${s.cd}s</font>`
+      if(s.duration) duration = `, <font color="green">Durasi ${s.duration}s</font>`
+      skill += `<br><br><font color="yellow">[${s.skill}]</font><br>Stamina ${s.stamina}${duration}${cd}<br>${s.in}`
     })
     if(i.summon !== undefined) {
       summon += "<p class='code'>Summon:"

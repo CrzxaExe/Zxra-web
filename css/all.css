@@ -452,6 +452,11 @@ body {
 #updates {
   margin-bottom: 1.6em;
 }
+.fixed-code {
+  overflow-y: hidden;
+  max-width: 100%;
+  white-space: normal;
+}
 .list {
   white-space: normal;
   overflow-y: hidden;
