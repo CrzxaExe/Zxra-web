@@ -96,7 +96,7 @@
       "name": "kyles",
       "trait": "Setiap serangan menghasilkan damage tambahan setara %HP user + 20%HP target, memberikan efek Wither",
       "atk": 2,
-      "rarity": "unique",
+      "rarity": "limited",
       "type": "slayer",
       "pasif": [
         {
@@ -520,8 +520,8 @@
       "pasif": [
         {
           "name": "Out Of Box",
-          "type": "unknown",
-          "effect": ""
+          "type": "Stack",
+          "effect": "Setiap kali menyerang target, memberi stack ke target dan meningkatkan damage +10% Atk setiap stacknya(maks 5 stack)"
         },
         {
           "name": "",
@@ -728,9 +728,9 @@
           "effect": "Ketika di serang saat Charge, memberikan damage area 5 block setara 100% Atk dan memberikan efek Poison"
         },
         {
-          "name": "",
-          "type": "unknown",
-          "effect": ""
+          "name": "Juned",
+          "type": "Kill",
+          "effect": "Setiap kali membunuh target, memberikan efek Poison ke radius 6 block dari target"
         }
       ],
       "skill": [

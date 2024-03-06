@@ -11,6 +11,11 @@ weapon = {
   breifcase: "../../img/icon/breifcase.png",
   century: "../../img/icon/century.png",
   greatsword: "../../img/icon/greatsword.png"
+},
+rarity = {
+  limited: "#3B9C9C",
+  unique: "neonpurple",
+  epic: "#E42217"
 }
 
 window.onload = Wpns()
@@ -31,12 +36,12 @@ function displayWeapon() {
     if(i.subType !== undefined) subType = ` - ${i.subType.charAt(0).toUpperCase() + i.subType.slice(1)}`
     i.tag.forEach(t => tag += `, ${t}`)
     i.pasif.forEach(j => {
-      pasif += `<br><br><font color="yellow">[${j.name.charAt(0).toUpperCase() + j.name.slice(1)}]</font> - <font color=lightred">${j.type.charAt(0).toUpperCase() + j.type.slice(1)}</font><br>${j.effect}`
+      pasif += `<br><br><font color="yellow">[${j.name.charAt(0).toUpperCase() + j.name.slice(1)}]</font> - <font color="orange">${j.type.charAt(0).toUpperCase() + j.type.slice(1)}</font><br>${j.effect}`
     })
     i.skill.forEach(s => {
       let cd = "", duration = ""
-      if(s.cd) cd = `, <font color="lightred">Cooldown ${s.cd}s</font>`
-      if(s.duration) duration = `, <font color="green">Durasi ${s.duration}s</font>`
+      if(s.cd) cd = `, <font color="orange">Cooldown ${s.cd}s</font>`
+      if(s.duration) duration = `, <font color="lime">Durasi ${s.duration}s</font>`
       skill += `<br><br><font color="yellow">[${s.skill}]</font><br>Stamina ${s.stamina}${duration}${cd}<br>${s.in}`
     })
     if(i.summon !== undefined) {
@@ -47,6 +52,6 @@ function displayWeapon() {
       summon += "</p>"
     }
 
-    index.innerHTML += `<div class="list code" onclick="classList.toggle('open')"><div class="cra"><img class="icon" src="${weapon[i.type]}"><b>${i.name.charAt(0).toUpperCase() + i.name.slice(1)}</b></div><br><p class="code">Atk &nbsp; : ${i.atk} Damage<br>Type &nbsp;: ${i.type.charAt(0).toUpperCase() + i.type.slice(1)}${subType}${elem}${ammo}<br>Rarity: ${i.rarity.charAt(0).toUpperCase() + i.rarity.slice(1)}<br>Tag &nbsp; : ${tag.replace(", ", "")}</p><p class="code">Sifat :<br>${i.trait}</p><p class="code">Pasif :${pasif}</p><p class="code">Skill :${skill}</p>${summon.replace(/\n/gi, "<br>")}<br>#${i.wp}</div>`
+    index.innerHTML += `<div class="list code" onclick="classList.toggle('open')"><div class="cra"><img class="icon" src="${weapon[i.type]}"><b>${i.name.charAt(0).toUpperCase() + i.name.slice(1)}</b></div><br><p class="code">Atk &nbsp; : <font color="lightsalmon" style="font-weight:bold">${i.atk}</font> Damage<br>Type &nbsp;: ${i.type.charAt(0).toUpperCase() + i.type.slice(1)}${subType}${elem}${ammo}<br>Rarity: <font color="${rarity[i.rarity.toLowerCase()]}">${i.rarity.charAt(0).toUpperCase() + i.rarity.slice(1)}</font><br>Tag &nbsp; : ${tag.replace(", ", "")}</p><p class="code">Sifat :<br>${i.trait}</p><p class="code">Pasif :${pasif}</p><p class="code">Skill :${skill}</p>${summon.replace(/\n/gi, "<br>")}<br>#${i.wp}</div>`
   })
 }
