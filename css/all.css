@@ -461,8 +461,8 @@ body {
   white-space: normal;
   overflow-y: hidden;
   position: relative;
-  height: 2.6vw;
-  max-height: 2.6vw;
+  height: 2.7vw;
+  max-height: 2.7vw;
   background: #383838;
 }
 .list.open {
@@ -473,8 +473,8 @@ body {
   white-space: normal;
   overflow-y: hidden;
   position: relative;
-  height: 5.3em;
-  max-height: 5.3em;
+  height: 6.3em;
+  max-height: 6.3em;
   background: #383838;
 }
 .list-up.open {
@@ -484,28 +484,44 @@ body {
 .list .code {
   white-space: normal;
   overflow-y: hidden;
-  margin-bottom: .1em;
+  margin-bottom: .12em;
 }
 .list .cra {
   display: flex;
+  height: calc(100% + 4px);
   position: relative;
   justify-content: left;
   justify-items: left;
   align-items: left;
   align-content: left;
 }
-.list .cra b {
-  padding: 0;
-  margin: 0 4px;
+.list .cra c {
+  padding: 0 .8em;
+  font-size: 1.5em;
+  color: gray;
+  margin: 0 9px;
+  font-family: Valorant;
+  transition: all .5s ease;
+  bottom: 0em;
+}
+.list:hover .cra c {
+  color: black;
+}
+.list.open .cra c {
+  color: white;
 }
 .icon {
-  width: 14px;
-  height: 14px;
-  max-height: 13px;
-  max-width: 13px;
+  width: 16px;
+  height: 16px;
+  max-height: 15px;
+  max-width: 15px;
+  position: relative;
   object-fit: contain;
-  padding: -13px;
+  padding: -.8em -4px;
   margin: 0vw;
-  filter: brightness(100%) grayscale(100%);
-  left: 0;
+  filter: brightness(100%) grayscale(100%) contrast(100%);
+  left: 1.2em;
+}
+.top-acc {
+  margin-top: .9em;
 }

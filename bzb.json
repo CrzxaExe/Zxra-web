@@ -26,7 +26,7 @@
         "technical": [
           "Memperbaiki bug",
           "Memoles beberapa skript dan menyederhanakan file",
-          "Menambahkan class:\n• BlockData\n• BlockInventory\n• BlockUi\n• Game\n• Quest\n• Tile",
+          "Menambahkan class:\n• BlockData\n• BlockInventory\n• BlockUi\n• Command\n• Dirty\n• Ench\n• Game\n• Quest\n• Script\n• status\n• Temp\n• Tile",
           "Menambahkan beberapa function baru",
           "Menambahkan metode baru dalam class:\n• Entity\n• Specialist",
           "Menghapus recipe unlock di banyak item",
@@ -34,7 +34,8 @@
           "Kecepatan pemulihan stamina menjadi 2/detik",
           "Toko akan bertambah mahal seiiring berjalannya waktu",
           "Sekarang hanya ada 14 Misi, yang bisa didapetin acak dan sesuai dengan reputasimu",
-          "Mengubah lagi beberapa pesan kematian"
+          "Mengubah lagi beberapa pesan kematian",
+          "3rd Party Features:\n+ Dash\n+ Clear All Status\n+ Status"
         ],
         "entity": [
           "Boss Kyle mendapatkan perubahan:\n+ Animasi Spawn\n+ Mereanimasi animasi lama\n+ Variasi Attack ke 4 & 5",
@@ -87,8 +88,8 @@
   "berita": {
     "title": "Some Random Update - Better Zxra Bedrock",
     "img": "./img/bzb.png",
-    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB\nKalian bisa cek projeknya\n\nMc Versi: 1.20.\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.0.6",
-    "stamp": "Sekarang",
+    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB. Untuk sekarang kami hanya bisa menampilkan fitur yang sudah jadi agar pengguna tidak kecewa jika fitur yang sudah kita rencanakan tidak jadi di buat.\n\nKami selalu membuka saran kalian agar update lebih terarah ke pengguna\nKalian bisa cek projeknya\n\nMc Versi: 1.20.62\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.0.6",
+    "stamp": "Sedang Diproses",
     "link": "https://crzxaexe.github.io/Zxra-web/bzb.html"
   },
   "weapon": [
@@ -428,7 +429,7 @@
       "skill": [
         {
           "skill": "1",
-          "in": "Menembakan peluru kearah tujuan dan melakukan dash sesuai arah serta menembakan lagi ke arah tujuan dengan damage 45 Atk, jika ammo kurang dari 2 maka akan auto reload",
+          "in": "Menembakan peluru kearah tujuan dan melakukan dash sesuai arah serta menembakan lagi ke arah tujuan dengan damage 20 Atk, jika ammo kurang dari 2 maka akan auto reload",
           "stamina": 6,
           "cd": 0.5
         },
@@ -446,7 +447,7 @@
         },
         {
           "skill": "Spesial",
-          "in": "",
+          "in": "Menembakan ammo yang memberikan 60 Atk dan akan meledak ketika mengenai block atau target",
           "stamina": 8,
           "cd": 3
         }
@@ -510,7 +511,7 @@
     {
       "name": "pandora",
       "trait": "Bisa menggunakan range dan melee",
-      "atk": 10,
+      "atk": 8,
       "type": "breifcase",
       "rarity": "unique",
       "tag": [
@@ -521,7 +522,7 @@
         {
           "name": "Out Of Box",
           "type": "Stack",
-          "effect": "Setiap kali menyerang target, memberi stack ke target dan meningkatkan damage +10% Atk setiap stacknya(maks 5 stack)"
+          "effect": "Setiap kali menyerang target, memberi stack ke target yang bertahan selama 5 detik dan meningkatkan damage +1 Atk setiap stacknya(maks 5 stack)"
         },
         {
           "name": "",
@@ -648,9 +649,10 @@
           "cd": 8.5
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "Spesial",
+          "in": "Meledakan semua yang ada didekat user dengan level ledakan 5 dan radius 9 block",
+          "stamina": 9,
+          "cd": 12
         }
       ],
       "wp": 11,
@@ -808,7 +810,7 @@
     },
     {
       "name": "berserk",
-      "trait": "Saat menyerang menggunakan attack, damage meningkat 200%(maks) ketika sudah di charge",
+      "trait": "Saat tidak menyerang selama 5 detik, damage meningkat menjadi 200% Atk, Charge reset setiap kali menyerang",
       "atk": 12,
       "type": "greatsword",
       "rarity": "Epic",
@@ -846,11 +848,16 @@
   "party": [
     {
       "name": "dash",
-      "desc": "Menjalankan script untuk pengirim agar melakukan dash kedepan",
+      "desc": "Memberikan efek dash kepada pengirim",
       "use": [
         "horizontal",
         "vertikal"
       ]
+    },
+    {
+      "name": "clear status",
+      "desc": "Menghapus semua status pengirim",
+      "use": []
     }
   ]
 }

@@ -14,7 +14,7 @@ function displayParty() {
   listed.forEach(e => {
     let use = ""
     e.use.forEach(r => use += ` [${r}]`)
-    text += `<br><b>${e.name.charAt(0).toUpperCase() + e.name.slice(1)}</b><hr>${e.desc}<br><br>Format: /scriptevent cz:${e.name}${use}`
+    text += `<br><b>${e.name.charAt(0).toUpperCase() + e.name.slice(1).replace(/ /gi, "_")}</b><hr>${e.desc}<br><br>Format: /scriptevent cz:${e.name.replace(/ /gi, "_")}${use}<br><br>`
   })
   index.innerHTML += text
 }
