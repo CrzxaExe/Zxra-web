@@ -1,4 +1,5 @@
 @font-face {
   font-family: 'Valorant';
   src: url("../../font/Valorant.ttf") format("truetype");
+  src: url("../../font/VALORANT-Regular.woff"), url("../../font/VALORANT-Regular.woff2");
 }
