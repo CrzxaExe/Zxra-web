@@ -4,5 +4,5 @@
   src: url("../../font/VALORANT-Regular.woff") format("woff"), url("../../font/VALORANT-Regular.woff2");
 }
 .list .cra c {
-  font-family: 'Valorant', Monospace;
+  font-family: 'Valorant', Sans-Serif;
 }

@@ -500,7 +500,7 @@ body {
   font-size: 1.5em;
   color: gray;
   margin: 0 9px;
-  font-family: 'Valorant', Monospace;
+  font-family: 'Valorant', Sans-Serif;
   transition: all .5s ease;
   bottom: 0em;
 }
