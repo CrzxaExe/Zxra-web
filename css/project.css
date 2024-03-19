@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Valorant';
-  src: url("../../font/VALORANT-Regular.woff") format("woff"), url("../../font/VALORANT-Regular.woff2") format("woff2");
+  src: url("../../font/VALORANT-Regular.woff") format("woff"),
+       url("../../font/VALORANT-Regular.woff2") format("woff2");
 }
 .list .cra c {
   font-family: 'Valorant', Sans-Serif;
