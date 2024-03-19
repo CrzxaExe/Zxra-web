@@ -14,7 +14,7 @@ weapon = {
 },
 rarity = {
   limited: "#3B9C9C",
-  unique: "neonpurple",
+  unique: "#7d2dff",
   epic: "#E42217"
 }
 
@@ -52,6 +52,6 @@ function displayWeapon() {
       summon += "</p>"
     }
 
-    index.innerHTML += `<div class="list code" onclick="classList.toggle('open')"><div class="cra"><img class="icon" src="${weapon[i.type]}"><c color="${rarity[i.rarity.toLowerCase()]}">${i.name.charAt(0).toUpperCase() + i.name.slice(1)}</c></div><p class="code top-acc">Atk &nbsp; : <font color="lightsalmon" style="font-weight:bold">${i.atk}</font> Damage<br>Type &nbsp;: ${i.type.charAt(0).toUpperCase() + i.type.slice(1)}${subType}${elem}${ammo}<br>Rarity: <font color="${rarity[i.rarity.toLowerCase()]}">${i.rarity.charAt(0).toUpperCase() + i.rarity.slice(1)}</font><br>Tag &nbsp; : ${tag.replace(", ", "")}</p><p class="code">Sifat :<br>${i.trait}</p><p class="code">Pasif :${pasif}</p><p class="code">Skill :${skill}</p>${summon.replace(/\n/gi, "<br>")}<br>#${i.wp}</div>`
+    index.innerHTML += `<div class="list code" onclick="classList.toggle('open')"><div class="cra"><img class="icon" src="${weapon[i.type]}"><c style="color: ${rarity[i.rarity.toLowerCase()]};">${i.name.charAt(0).toUpperCase() + i.name.slice(1)}</c></div><p class="code top-acc">Atk &nbsp; : <font color="lightsalmon" style="font-weight:bold">${i.atk}</font> Damage<br>Type &nbsp;: ${i.type.charAt(0).toUpperCase() + i.type.slice(1)}${subType}${elem}${ammo}<br>Rarity: <font color="${rarity[i.rarity.toLowerCase()]}">${i.rarity.charAt(0).toUpperCase() + i.rarity.slice(1)}</font><br>Tag &nbsp; : ${tag.replace(", ", "")}</p><p class="code">Sifat :<br>${i.trait}</p><p class="code">Pasif :${pasif}</p><p class="code">Skill :${skill}</p>${summon.replace(/\n/gi, "<br>")}<br>#${i.wp}</div>`
   })
 }

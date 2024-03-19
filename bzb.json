@@ -2,9 +2,9 @@
   "down": [
     {
       "ver": "2.8.7",
-      "mc": "1.20.40",
+      "mc": "1.20.62",
       "link": "",
-      "info": "Some Random Update\n\nKali ini lebih menambahkan fitur yang kalian sarankan",
+      "info": "Forgery Update\nKali ini lebih menambahkan fitur yang kalian sarankan dan memperbanyak peralatan serta bahan-bahannya",
       "update": {
         "game": [
           "Menambahkan sistem Misi/Tugas",
@@ -21,19 +21,21 @@
           "Menambahkan audio baru",
           "Menambahkan fitur lokasi terakhir saat mati",
           "Menambahkan cooldown senjata",
-          "Menambahkan fitur pihak ketiga"
+          "Menambahkan fitur pihak ketiga",
+          "Menambahkan fitur status entitas",
+          "Menambahkan fitur notifikasi cuaca",
+          "Mengkostumisasi beberapa ui"
         ],
         "technical": [
           "Memperbaiki bug",
           "Memoles beberapa skript dan menyederhanakan file",
-          "Menambahkan class:\n• BlockData\n• BlockInventory\n• BlockUi\n• Command\n• Dirty\n• Ench\n• Game\n• Quest\n• Script\n• status\n• Temp\n• Tile",
+          "Menambahkan class:\n• BlockData, BlockInventory, BlockUi\n• Command\n• Cooldown, status\n• Dirty\n• Ench\n• Game\n• Npc\n• Quest\n• Script\n• Temp\n• Tile",
           "Menambahkan beberapa function baru",
-          "Menambahkan metode baru dalam class:\n• Entity\n• Specialist",
-          "Menghapus recipe unlock di banyak item",
+          "Menghapus recipe unlock",
           "Meningkatan pendapatan stamina dari meminum air bersih",
           "Kecepatan pemulihan stamina menjadi 2/detik",
           "Toko akan bertambah mahal seiiring berjalannya waktu",
-          "Sekarang hanya ada 14 Misi, yang bisa didapetin acak dan sesuai dengan reputasimu",
+          "Sekarang hanya ada 17 Misi, yang bisa di dapatkan secara acak dan sesuai dengan reputasimu",
           "Mengubah lagi beberapa pesan kematian",
           "3rd Party Features:\n+ Dash\n+ Clear All Status\n+ Status"
         ],
@@ -48,7 +50,8 @@
           "Menurunkan max damage pasif normal attack senjata tipe:\n• Slayer\n• Hammer",
           "Senjata Kyles: Mengurangi kenaikan damage dari %Charge dan menaikan raw damage Skill\n+ Ultimate Skill",
           "Pengubahan pasif senjata menjadi sifat dari senjata, senjata lama akan mendapatkan pasif baru",
-          "Perubahan slot pasif untuk rarity senjata"
+          "Perubahan slot pasif untuk rarity senjata",
+          "Menambahkan senjata mentahan untuk tipe:\n• Greatsword\n• Hammer\n• Reaper"
         ],
         "block": [
           "Bijih berlian sekarang memiliki tekstur beranimasi",
@@ -86,12 +89,39 @@
   ],
   "galery": [],
   "berita": {
-    "title": "Some Random Update - Better Zxra Bedrock",
+    "title": "Forgery Update - Better Zxra Bedrock",
     "img": "./img/bzb.png",
-    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB. Untuk sekarang kami hanya bisa menampilkan fitur yang sudah jadi agar pengguna tidak kecewa jika fitur yang sudah kita rencanakan tidak jadi di buat.\n\nKami selalu membuka saran kalian agar update lebih terarah ke pengguna\nKalian bisa cek projeknya\n\nMc Versi: 1.20.62\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.0.6",
+    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB. Untuk sekarang kami hanya bisa menampilkan fitur yang sudah jadi agar pengguna tidak kecewa jika fitur yang sudah kita rencanakan tidak jadi di buat.\n\nKami selalu membuka saran kalian agar update lebih terarah ke pengguna\nKalian bisa cek projeknya\n\nMc Versi: 1.20.62\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.1.0",
     "stamp": "Sedang Diproses",
     "link": "https://crzxaexe.github.io/Zxra-web/bzb.html"
   },
+  "party": [
+    {
+      "name": "dash",
+      "desc": "Memberikan efek dash kepada pengirim",
+      "use": [
+        "horizontal",
+        "vertikal"
+      ]
+    },
+    {
+      "name": "clear status",
+      "desc": "Menghapus semua status pengirim",
+      "use": []
+    },
+    {
+      "name": "status",
+      "desc": "Menambahkan status ke pengirim",
+      "use": [
+        "nama_status",
+        "durasi",
+        "level",
+        "tipe",
+        "stack/Boolean",
+        "decay"
+      ]
+    }
+  ],
   "weapon": [
     {
       "name": "kyles",
@@ -128,11 +158,6 @@
           "in": "Dash ketujuan, jarak setara %Charge, memberikan damage ke radius 4.5 block setara 1300% Atk + %Charge",
           "stamina": 6,
           "cd": 4
-        },
-        {
-          "skill": "3",
-          "in": "Mendapatkan stack",
-          "stamina": 3
         },
         {
           "skill": "Ultimate",
@@ -537,9 +562,10 @@
           "stamina": 0
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "2",
+          "in": "Memberikan damage ke area selebar 3 radius, target yang berada di dalam radius 2 block menerima 300% Atk dan knockup sedangkan diluar area tersebut menerima 200% Atk dan sedikit knockback",
+          "stamina": 12,
+          "cd": 8
         },
         {
           "skill": "",
@@ -632,13 +658,13 @@
       "skill": [
         {
           "skill": "1",
-          "in": "Memberikan damage 220% target dan melemparkan Lectaze Sword yang akan menyerang target setelah 5 detik",
+          "in": "Memberikan damage 220% Atk target dan melemparkan Lectaze Sword yang akan menyerang target setelah 5 detik",
           "stamina": 7,
           "cd": 1.5
         },
         {
           "skill": "2",
-          "in": "Menyerang target yang berada di radius 6 block sesuai dengan jumlah %Creations, memberikan damage 450%",
+          "in": "Menyerang target yang berada di radius 6 block sesuai dengan jumlah %Creations, memberikan damage 450% Atk",
           "stamina": 12,
           "cd": 4
         },
@@ -689,9 +715,10 @@
       ],
       "skill": [
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "1",
+          "in": "Menusuk ke arah depan dengan radius 4 block ke depan memberikan damage 200% Atk kepada 1 target, mentrigger pasif",
+          "stamina": 7,
+          "cd": 4
         },
         {
           "skill": "",
@@ -737,9 +764,10 @@
       ],
       "skill": [
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "1",
+          "in": "Menyerang kedepan dengan radius 5 block dan memberikan damage 200% Atk serta memberikan efek Poison",
+          "stamina": 8,
+          "cd": 2.5
         },
         {
           "skill": "",
@@ -786,9 +814,10 @@
       ],
       "skill": [
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "1",
+          "in": "Menguatkan 1 serangan normal selanjutnya, memperlebar radius serangan dan damage meningkat 200% serta user mendapatkan efek Speed.",
+          "stamina": 6,
+          "cd": 8
         },
         {
           "skill": "",
@@ -816,9 +845,9 @@
       "rarity": "Epic",
       "pasif": [
         {
-          "name": "",
-          "type": "unknown",
-          "effect": ""
+          "name": "W-Harm",
+          "type": "Stack",
+          "effect": "Setiap diserang, damage yang masuk akan disimpan, damage yang tersimpan akan digunakan saat menggunakan skill 3nya"
         }
       ],
       "skill": [
@@ -843,21 +872,6 @@
         "Nuker"
       ],
       "wp": 15
-    }
-  ],
-  "party": [
-    {
-      "name": "dash",
-      "desc": "Memberikan efek dash kepada pengirim",
-      "use": [
-        "horizontal",
-        "vertikal"
-      ]
-    },
-    {
-      "name": "clear status",
-      "desc": "Menghapus semua status pengirim",
-      "use": []
     }
   ]
 }

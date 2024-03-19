@@ -1,5 +1,8 @@
 @font-face {
   font-family: 'Valorant';
   src: url("../../font/Valorant.ttf") format("truetype");
-  src: url("../../font/VALORANT-Regular.woff"), url("../../font/VALORANT-Regular.woff2");
+  src: url("../../font/VALORANT-Regular.woff") format("woff"), url("../../font/VALORANT-Regular.woff2");
+}
+.list .cra c {
+  font-family: 'Valorant', Monospace;
 }
