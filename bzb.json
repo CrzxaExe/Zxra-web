@@ -2,7 +2,7 @@
   "down": [
     {
       "ver": "2.8.7",
-      "mc": "1.20.62",
+      "mc": "1.20.70",
       "link": "",
       "info": "Forgery Update\nKali ini lebih menambahkan fitur yang kalian sarankan dan memperbanyak peralatan serta bahan-bahannya",
       "update": {
@@ -24,7 +24,8 @@
           "Menambahkan fitur pihak ketiga",
           "Menambahkan fitur status entitas",
           "Menambahkan fitur notifikasi cuaca",
-          "Mengkostumisasi beberapa ui"
+          "Mengkostumisasi beberapa ui",
+          "Menambahkan UI status di layar saat bermain"
         ],
         "technical": [
           "Memperbaiki bug",
@@ -37,7 +38,9 @@
           "Toko akan bertambah mahal seiiring berjalannya waktu",
           "Sekarang hanya ada 17 Misi, yang bisa di dapatkan secara acak dan sesuai dengan reputasimu",
           "Mengubah lagi beberapa pesan kematian",
-          "3rd Party Features:\n+ Dash\n+ Clear All Status\n+ Status"
+          "3rd Party Features:\n+ Dash\n+ Clear All Status\n+ Status",
+          "Stamina cooldown setelah berlari yaitu 3 detik",
+          "Mekanik kehausan sekarang memiliki status dengan tipe 'thirst'"
         ],
         "entity": [
           "Boss Kyle mendapatkan perubahan:\n+ Animasi Spawn\n+ Mereanimasi animasi lama\n+ Variasi Attack ke 4 & 5",
@@ -56,7 +59,8 @@
         "block": [
           "Bijih berlian sekarang memiliki tekstur beranimasi",
           "Bijih besi (normal & deepslate) mendapatkan variasi baru",
-          "Furnitur baru yaitu kursi (semua variasi kayu)"
+          "Furnitur baru yaitu kursi (semua variasi kayu)",
+          "Menambah blok crafting baru: Altar, Penempa, Meja Kerja, Set Alkimia"
         ],
         "world": [
           "Menambah variasi pohon oak",
@@ -91,7 +95,7 @@
   "berita": {
     "title": "Forgery Update - Better Zxra Bedrock",
     "img": "./img/bzb.png",
-    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB. Untuk sekarang kami hanya bisa menampilkan fitur yang sudah jadi agar pengguna tidak kecewa jika fitur yang sudah kita rencanakan tidak jadi di buat.\n\nKami selalu membuka saran kalian agar update lebih terarah ke pengguna\nKalian bisa cek projeknya\n\nMc Versi: 1.20.62\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.1.0",
+    "des": "Fitur yang sudah jadi akan ditampilkan di halaman utama projek BZB. Untuk sekarang kami hanya bisa menampilkan fitur yang sudah jadi agar pengguna tidak kecewa jika fitur yang sudah kita rencanakan tidak jadi di buat.\n\nKami selalu membuka saran kalian agar update lebih terarah ke pengguna\nKalian bisa cek projeknya\n\nMc Versi: 1.20.81\nPack Versi v1.1.2r\n\nVersi Pack\nBZB : v2.8.7\nUI  : v1.1.0",
     "stamp": "Sedang Diproses",
     "link": "https://crzxaexe.github.io/Zxra-web/bzb.html"
   },
@@ -563,7 +567,7 @@
         },
         {
           "skill": "2",
-          "in": "Memberikan damage ke area selebar 3 radius, target yang berada di dalam radius 2 block menerima 300% Atk dan knockup sedangkan diluar area tersebut menerima 200% Atk dan sedikit knockback",
+          "in": "Memberikan damage ke area selebar 5 radius, target yang berada di dalam radius 3 block menerima 300% Atk dan knockup sedangkan diluar area tersebut menerima 200% Atk dan sedikit knockback",
           "stamina": 12,
           "cd": 8
         },
@@ -699,7 +703,8 @@
       "rarity": "unique",
       "tag": [
         "Debuff",
-        "Nuker"
+        "Nuker",
+        "Dps"
       ],
       "pasif": [
         {
@@ -721,9 +726,10 @@
           "cd": 4
         },
         {
-          "skill": "",
-          "in": "",
-          "stamina": 0
+          "skill": "2",
+          "in": "Memberikan pasif %Electricity ke radius 9 block serta memberikan efek Weakness",
+          "stamina": 12,
+          "cd": 12
         },
         {
           "skill": "",
